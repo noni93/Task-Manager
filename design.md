@@ -85,9 +85,10 @@ ____
 | Actor's Goal | Start specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
-| Postconditions | Start through GUI |
-| Flow of events | --> User hits button |
-|  | <-- Database finds related task and runs start() |
+| Postconditions | Start through GUI |  
+ Flow of events   
+1.--> User hits button    
+2.<-- Database finds related task and runs start()  
 
 
 | Use Case #2 | Stop Task |
@@ -97,9 +98,10 @@ ____
 | Actor's Goal | Finish specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
-| Postconditions | stop task through GUI |
-| Flow of events | --> User hits button |
-|  | <-- Database finds related task and runs stop() |
+| Postconditions | stop task through GUI |  
+ Flow of events    
+1.--> User hits button  
+2.<-- Database finds related task and runs stop()  
 
 
 | Use Case #3 | Edit Task |
@@ -109,10 +111,11 @@ ____
 | Actor's Goal | Edit specified task (any of the items within task) |
 | Participating Actors | Database, user |
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
-| Postconditions | edit task through GUI |
-| Flow of events | --> admin hits button |
-|  | <-- Database finds related task and runs edit(specified object) |
-|  | --> data is changed and displayed |
+| Postconditions | edit task through GUI   
+Flow of events  
+1.--> admin hits button  
+2.<-- Database finds related task and runs edit(specified object)  
+3.--> data is changed and displayed  
 
 | Use Case #4 | Add Estimated Time |
 |--|--|
@@ -121,13 +124,14 @@ ____
 | Actor's Goal | Add estimated time of completion for task (seen by admin) |
 | Participating Actors | Database, user, admin |
 | Preconditions | User types in entry box to specify time |
-| Postconditions | Reflected on GUI |
-| Flow of events | --> User edits text in box |
-|  | <-- Database finds related task and runs edit(estimated time) |
-|  | --> data is changed and displayed |
+| Postconditions | Reflected on GUI   
+Flow of events  
+1.--> User edits text in box  
+2.<-- Database finds related task and runs edit(estimated time)  
+3.--> data is changed and displayed  
 
 
-| Use Case # | Create Account/Login |
+| Use Case # 5| Create Account/Login |
 |--|--|
 | Requirements | Req1,Req4 |
 | Initiating Actor | Manager,Employee |
@@ -142,7 +146,7 @@ ____
  3.--> User enters credentials  
  4.<-- if valid credential, then user able to use task Manager  
  
- | Use Case # | summary |
+ | Use Case # 6| summary |
 |--|--|
 | Requirements | Req3,Req8, Req11, Req14 |
 | Initiating Actor | Manager,Employee |
@@ -155,7 +159,7 @@ ____
  1.<-- User selects summary.  
  2.--> Program returns required/available information for task. 
  
-  | Use Case # | Task Priority |
+  | Use Case # 7 | Task Priority |
 |--|--|
 | Requirements | Req2,Req7, Req19 |
 | Initiating Actor | Employee |
@@ -168,7 +172,7 @@ ____
  1.<-- User selects task priority.    
  2.--> Program returns priority for task if set by manager.
  
-| Use Case # | Logout |
+| Use Case # 8| Logout |
 |--|--|
 | Requirements | Req4,Req15|
 | Initiating Actor | Employee , manager, dev|
