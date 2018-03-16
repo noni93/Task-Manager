@@ -84,7 +84,8 @@ ____
 | Actor's Goal | Creates account, and Login into the account with valid credentials |
 | Participating Actors | Database |
 | Preconditions | Valid employee/manager username  and password|
-| Postconditions | Use task manager as desired |
+| Postconditions | Use task manager as desired |  
+
  Flow of events   
  1.--> Program launches  
  2.<-- Username and password required    
