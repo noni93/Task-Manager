@@ -24,6 +24,10 @@ Product Review
 
 Project Overview
 ----------------
+* Task organizer for the average employee.
+* Three accounts associated with this prodcut; manager, employee, and dev account
+* Manager can use this product to manage employee productivity.
+* Employees can use this product for time management.
 
 Project Architecture
 --------------------
