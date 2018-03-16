@@ -77,6 +77,56 @@ REQ20        |Application should allow shared working environment where users in
 
 ### Use Cases  
 ____
+
+| Use Case #1 | Start Task |
+|--|--|
+| Requirements |  |
+| Initiating Actor | User/Admin |
+| Actor's Goal | Start specified task with required specifications |
+| Participating Actors | Database, user |
+| Preconditions | User sees button named "Start Task" on main page of website (after login) |
+| Postconditions | Start through GUI |
+| Flow of events | --> User hits button |
+|  | <-- Database finds related task and runs start() |
+
+
+| Use Case #2 | Stop Task |
+|--|--|
+| Requirements |  |
+| Initiating Actor | User/Admin |
+| Actor's Goal | Finish specified task with required specifications |
+| Participating Actors | Database, user |
+| Preconditions | User sees button named "Stop Task" on main page of website (after login) |
+| Postconditions | stop task through GUI |
+| Flow of events | --> User hits button |
+|  | <-- Database finds related task and runs stop() |
+
+
+| Use Case #3 | Edit Task |
+|--|--|
+| Requirements |  |
+| Initiating Actor | Admin |
+| Actor's Goal | Edit specified task (any of the items within task) |
+| Participating Actors | Database, user |
+| Preconditions | Admin sees list of items on their page with corresponding "edit" button |
+| Postconditions | edit task through GUI |
+| Flow of events | --> admin hits button |
+|  | <-- Database finds related task and runs edit(specified object) |
+|  | --> data is changed and displayed |
+
+| Use Case #4 | Add Estimated Time |
+|--|--|
+| Requirements |  |
+| Initiating Actor | User |
+| Actor's Goal | Add estimated time of completion for task (seen by admin) |
+| Participating Actors | Database, user, admin |
+| Preconditions | User types in entry box to specify time |
+| Postconditions | Reflected on GUI |
+| Flow of events | --> User edits text in box |
+|  | <-- Database finds related task and runs edit(estimated time) |
+|  | --> data is changed and displayed |
+
+
 | Use Case # | Create Account/Login |
 |--|--|
 | Requirements | Req1,Req4 |
