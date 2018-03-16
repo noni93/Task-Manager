@@ -85,9 +85,11 @@ ____
 | Actor's Goal | Start specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
-| Postconditions | Start through front end |
-| Flow of events | --> User hits button |
-|  | <-- Database finds related task and runs start() |
+| Postconditions | Start through front end |  
+  
+Flow of events  
+1.--> User hits button  
+2.<-- Database finds related task and runs start()  
 
 
 | Use Case #2 | Stop Task |
@@ -97,9 +99,11 @@ ____
 | Actor's Goal | Finish specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
-| Postconditions | stop task through front end |
-| Flow of events | --> User hits button |
-|  | <-- Database finds related task and runs stop() |
+| Postconditions | stop task through front end |   
+ 
+Flow of events  
+1.--> User hits button  
+2.<-- Database finds related task and runs stop()  
 
 
 | Use Case #3 | Edit Task |
@@ -109,10 +113,12 @@ ____
 | Actor's Goal | Edit specified task (any of the items within task) |
 | Participating Actors | Database, user |
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
-| Postconditions | edit task through front end |
-| Flow of events | --> admin hits button |
-|  | <-- Database finds related task and runs edit(specified object) |
-|  | --> data is changed and displayed |
+| Postconditions | edit task through front end |  
+  
+Flow of events  
+1.--> admin hits button  
+2.<-- Database finds related task and runs edit(specified object)  
+3.--> data is changed and displayed  
 
 
 | Use Case #4 | Add Estimated Time |
@@ -122,10 +128,12 @@ ____
 | Actor's Goal | Add estimated time of completion for task (seen by admin) |
 | Participating Actors | Database, user, admin |
 | Preconditions | User types in entry box to specify time |
-| Postconditions | Reflected on front end |
-| Flow of events | --> User edits text in box |
-|  | <-- Database finds related task and runs edit(estimated time) |
-|  | --> data is changed and displayed |
+| Postconditions | Reflected on front end |  
+ 
+ Flow of events  
+ 1.--> User edits text in box  
+2.<-- Database finds related task and runs edit(estimated time)  
+3.--> data is changed and displayed  
 
 
 | Use Case #5 | Assign Task |
@@ -135,13 +143,15 @@ ____
 | Actor's Goal | Assign task to specific user |
 | Participating Actors | Database, user, admin |
 | Preconditions | Admin clicks "assign" button |
-| Postconditions | Reflected on front end |
-| Flow of events | --> admin adds user to box and clicks "assign" |
-|  | <-- Database finds related user and runs assign(user) |
-|  | --> data is changed and displayed |
+| Postconditions | Reflected on front end |  
+ 
+Flow of events  
+1.--> admin adds user to box and clicks "assign"  
+2.<-- Database finds related user and runs assign(user)   
+3.--> data is changed and displayed  
 
 
-| Use Case # | Create Account/Login |
+| Use Case # 6| Create Account/Login |
 |--|--|
 | Requirements | Req1,Req4 |
 | Initiating Actor | Manager,Employee |
@@ -156,7 +166,7 @@ ____
  3.--> User enters credentials  
  4.<-- if valid credential, then user able to use task Manager  
  
- | Use Case # | summary |
+ | Use Case # 7 | summary |
 |--|--|
 | Requirements | Req3,Req8, Req11, Req14 |
 | Initiating Actor | Manager,Employee |
@@ -169,7 +179,7 @@ ____
  1.<-- User selects summary.  
  2.--> Program returns required/available information for task. 
  
-  | Use Case # | Task Priority |
+  | Use Case # 8 | Task Priority |
 |--|--|
 | Requirements | Req2,Req7, Req19 |
 | Initiating Actor | Employee |
@@ -182,7 +192,7 @@ ____
  1.<-- User selects task priority.    
  2.--> Program returns priority for task if set by manager.
 
-| Use Case # | delete task |
+| Use Case # 9| delete task |
 |--|--|
 | Requirements | Req1,Req4 |
 | Initiating Actor | Employee, Manager |
@@ -195,7 +205,7 @@ ____
  1.<-- User selects delete task.    
  2.--> Database updated by removing specified task.
 
-| Use Case # | log out |
+| Use Case # 10| log out |
 |--|--|
 | Requirements | Req4,Req15 |
 | Initiating Actor | Employee, manager,dev |
