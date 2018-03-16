@@ -75,9 +75,27 @@ REQ 19       |Application should give managers enough admin rights, such as chan
 REQ20        |Application should allow shared working environment where users in a given team can track all tasks of that team, chat with each other, provide feedback, etc.
 
 
-Use Cases  
+### Use Cases  
 ____
 First Header | Second Header
 ------------ | -------------
 Content cell 1 | Content cell 2
 Content column 1 | Content column 2
+
+
+#### Matrix
+|Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| 
+|---------------|---------------|-------|---|-|-|-|-|-|-
+|REQ1 ||	|
+|REQ2 || 	|
+|REQ3 || 	|
+|REQ4 || 	|
+|REQ5 || 	|
+|REQ6 || 	|
+|REQ7 || 	|
+|REQ8 || 	|
+|REQ9 || 	|
+|REQ10 || 	|
+|REQ11 || 	|
+|Max PW||	|
+|Total PW|| |
