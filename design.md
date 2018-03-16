@@ -185,7 +185,7 @@ ____
 
 #### Requirements-to-use-cases traceability matrix
 |Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| UC9|
-|---------------|---------------|-------|---|-|-|-|-|-|-
+|---------------|---------------|-------|---|-|-|-|-|-|-|-
 |REQ1 ||	|
 |REQ2 || 	|
 |REQ3 || 	|
@@ -195,16 +195,16 @@ ____
 |REQ7 || 	|
 |REQ8 || 	|
 |REQ9 || 	|
-|REQ10 || 	|
-|REQ11 || 	|
-|REQ12 || 	|
-|REQ13 || 	|
-|REQ14 || 	|
-|REQ15 || 	|
-|REQ16 || 	|
-|REQ17 || 	|
-|REQ18 || 	|
-|REQ19 || 	|
-|REQ20 || 	|
+|REQ10|| 	|
+|REQ11|| 	|
+|REQ12|| 	|
+|REQ13|| 	|
+|REQ14|| 	|
+|REQ15|| 	|
+|REQ16|| 	|
+|REQ17|| 	|
+|REQ18|| 	|
+|REQ19|| 	|
+|REQ20|| 	|
 |Max PW||	|
 |Total PW|| |
