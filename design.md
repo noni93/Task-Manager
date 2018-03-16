@@ -221,26 +221,27 @@ Flow of events
 
 #### Requirements-to-use-cases traceability matrix
 
+
 |Requirements	|	UC1| UC2 | UC3 | UC4 | UC5 | UC6 | UC7| UC8| UC9| UC10|
 |---------------|---------------|-------|---|-|-|-|-|-|-|-
-|REQ1 |X|X|||X|X||X||
+|REQ1 |X|X|||X|X||X|X|
 |REQ2 ||||||X||X||
 |REQ3 |||||||X|||
-|REQ4 |X|X||||||X|X|
+|REQ4 |X|X||||||X|X|X
 |REQ5 |||x|||||||
 |REQ6 |||X|X|X|||||
 |REQ7 ||||||||X||
 |REQ8 ||||||||X||
-|REQ9 |||X|||||||
+|REQ9 |||X||||||X|
 |REQ10||||||||||
 |REQ11|||||X||X|||
 |REQ12|||||X|||||
 |REQ13||||||||||
-|REQ14||||X|X|X|||X|
+|REQ14||||X|X|X||||X
 |REQ15||||||||||
 |REQ16||||||||||
 |REQ17||||X|X|||||
 |REQ18||||||||||
 |REQ19||||||||X||
 |REQ20||||||||||
-|Total PW|2|2|3|3|6|3|2|6|2|
+|Total PW|2|2|3|3|6|3|2|6|2|2
