@@ -116,7 +116,20 @@ ____
 
  Flow of events   
  1.<-- User selects task priority.    
- 2.--> Program returns priority for task if set by manager.  
+ 2.--> Program returns priority for task if set by manager.
+ 
+| Use Case # | Logout |
+|--|--|
+| Requirements | Req4,Req15|
+| Initiating Actor | Employee , manager, dev|
+| Actor's Goal | Log out of the task manager|
+| Participating Actors | Database |
+| Preconditions | user must be logged in|
+| Postconditions | program must logout the user|   
+
+ Flow of events   
+ 1.<-- User selects logout.    
+ 2.--> program saves required info and logs out the user.     
 
 
 #### Requirements-to-use-cases traceability matrix
