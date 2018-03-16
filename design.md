@@ -45,7 +45,8 @@ Front-end side will have user interactions components such as dashboard, login a
 Requirements
 ------------
 
-Use Cases
+Use Cases  
+____
 First Header | Second Header
 ------------ | -------------
 Content cell 1 | Content cell 2
