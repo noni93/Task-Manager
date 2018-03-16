@@ -80,9 +80,9 @@ ____
 | Use Case #1 | Start Task |
 |--|--|
 | Requirements |  |
-| Initiating Actor | User/Admin |
+| Initiating Actor | employee |
 | Actor's Goal | Start specified task with required specifications |
-| Participating Actors | Database, user |
+| Participating Actors | Database, manager |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
 | Postconditions | Start through GUI |   
 
@@ -94,9 +94,9 @@ Flow of events
 | Use Case #2 | Stop Task |
 |--|--|
 | Requirements |  |
-| Initiating Actor | User/Admin |
+| Initiating Actor | employee |
 | Actor's Goal | Finish specified task with required specifications |
-| Participating Actors | Database, user |
+| Participating Actors | Database, manager |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
 | Postconditions | stop task through GUI|   
 
@@ -108,15 +108,29 @@ Flow of events
 | Use Case #3 | Edit Task |
 |--|--|
 | Requirements |  |
-| Initiating Actor | Admin |
+| Initiating Actor | employee, manager|
 | Actor's Goal | Edit specified task (any of the items within task) |
-| Participating Actors | Database, user |
+| Participating Actors | Database|
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
 | Postconditions | edit task through GUI|  
 
 Flow of events  
 1.--> admin hits button  
 2.<-- Database finds related task and runs edit(specified object)  
+3.--> data is changed and displayed  
+
+| Use Case #4 | Delete task |
+|--|--|
+| Requirements |  |
+| Initiating Actor | manager |
+| Actor's Goal | Add estimated time of completion for task (seen by manager) |
+| Participating Actors | Database, employee|
+| Preconditions | User types in entry box to specify time |
+| Postconditions | Reflected on GUI|   
+
+Flow of events  
+1.--> User edits text in box  
+2.<-- Database finds related task and runs edit(estimated time)  
 3.--> data is changed and displayed  
 
 | Use Case #4 | Add Estimated Time |
