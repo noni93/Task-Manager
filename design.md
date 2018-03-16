@@ -91,6 +91,19 @@ ____
  2.<-- Username and password required    
  3.--> User enters credentials  
  4.<-- if valid credential, then user able to use task Manager  
+ 
+ | Use Case # | summary |
+|--|--|
+| Requirements | Req3,Req8, Req11, Req14 |
+| Initiating Actor | Manager,Employee |
+| Actor's Goal | Get the summary for whole tasks or specific task |
+| Participating Actors | Database |
+| Preconditions | task should exist in database|
+| Postconditions | provides name, description, size, running time for the task |   
+
+ Flow of events   
+ 1.<-- User selects summary.  
+ 2.--> Program returns required/available information for task.  
 
 
 #### Requirements-to-use-cases traceability matrix
