@@ -50,6 +50,30 @@ Front-end side will have user interactions components such as dashboard, login a
 
 Requirements
 ------------
+ 
+Requirements | Description
+-------------|------------
+REQ1         | Application should generate dynamic dashboards based on the role of the person who logged in with valid credentials. For example, Manager should have admin dashboard for the tasks his/her team is working on
+REQ2         | Application should allow Employees o propose the task to the manager and their teams with attributes such as start time, estimated stop time, description, priorities, etc
+REQ3         |Application should enable summarizing the tasks, altering summaries for users with different roles
+REQ4         |Application must validate credentials when login and must validate that certain actions are executed based on the rights of the user. For example, only manager can approve or disapprove tasks as they have admin rights.
+REQ5         |Application should have different tabs for different functions like user dashboard may have tab named “Completed” which shows all completed tasks so far.
+REQ6         |Application should allow employees to generate the task reports for any time period whenever needed. For example, when manager suddenly asks for the report of the progress on tasks
+REQ7         |Application should allow users to prioritize tasks
+REQ8         |Application should allow users to propose an estimated end date for certain task so other users on the team can trace any given task and frame their efforts that way.
+REQ9         |Application should allow different users to feedback other tasks if they have access to those tasks
+REQ10        |Application should allow managers to assign new task or reassign task to someone else in the team
+REQ11        |Application should allow users to create and view history in form of the threads containing who worked on a given task and how and when he/she worked on it.
+REQ12        |Application should allow employees to change the task attribute without any restrictions if that task has not been approved
+REQ13        |Application should provide alternatives to overcome some restrictions if they are needed to.For example, if someone wants to change something about a task after it’s approved by manager then he or she must get permission from the manager to modify that task
+REQ14		 |Application should be able to generate summaries for all type of tasks,i.e., in progress tasks, completed tasks, and pending tasks.
+REQ15        |Application should allow the successful logout.
+REQ16        |Application should have timeline feature which allows users to manage their pace on tasks in progress
+REQ17        |Application should display different visualizations like graphs representing the amount of completion of a certain task. 
+REQ 18       |Application should allow dynamic registration criteria for corporations which can then distribute the usage of this app to teams where managers are generally admins and employees are users
+REQ 19       |Application should give managers enough admin rights, such as changing due dates, deleting tasks, updating tasks, updating priorities, etc.
+REQ20        |Application should allow shared working environment where users in a given team can track all tasks of that team, chat with each other, provide feedback, etc.
+
 
 ### Use Cases  
 ____
