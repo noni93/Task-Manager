@@ -85,7 +85,7 @@ ____
 | Actor's Goal | Start specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
-| Postconditions | Start through GUI |
+| Postconditions | Start through front end |
 | Flow of events | --> User hits button |
 |  | <-- Database finds related task and runs start() |
 
@@ -97,7 +97,7 @@ ____
 | Actor's Goal | Finish specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
-| Postconditions | stop task through GUI |
+| Postconditions | stop task through front end |
 | Flow of events | --> User hits button |
 |  | <-- Database finds related task and runs stop() |
 
@@ -109,7 +109,7 @@ ____
 | Actor's Goal | Edit specified task (any of the items within task) |
 | Participating Actors | Database, user |
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
-| Postconditions | edit task through GUI |
+| Postconditions | edit task through front end |
 | Flow of events | --> admin hits button |
 |  | <-- Database finds related task and runs edit(specified object) |
 |  | --> data is changed and displayed |
@@ -122,7 +122,7 @@ ____
 | Actor's Goal | Add estimated time of completion for task (seen by admin) |
 | Participating Actors | Database, user, admin |
 | Preconditions | User types in entry box to specify time |
-| Postconditions | Reflected on GUI |
+| Postconditions | Reflected on front end |
 | Flow of events | --> User edits text in box |
 |  | <-- Database finds related task and runs edit(estimated time) |
 |  | --> data is changed and displayed |
@@ -135,7 +135,7 @@ ____
 | Actor's Goal | Assign task to specific user |
 | Participating Actors | Database, user, admin |
 | Preconditions | Admin clicks "assign" button |
-| Postconditions | Reflected on GUI |
+| Postconditions | Reflected on front end |
 | Flow of events | --> admin adds user to box and clicks "assign" |
 |  | <-- Database finds related user and runs assign(user) |
 |  | --> data is changed and displayed |
