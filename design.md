@@ -27,6 +27,9 @@ Project Overview
 
 Project Architecture
 --------------------
+* Creating frotn end using Java Script
+* Adding API's from google such as calendar
+
 
 Requirements
 ------------
