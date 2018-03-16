@@ -18,9 +18,9 @@ Product Review
 
 ***Github (web page)***
 * Purpose: file host for people working together
-* Github keeps track of user activity, repositories created and contributed to, and teams user is in.
+* Github keeps track of user activity, repositories created and contributed to, and teams user are in.
 * contains access rights (private and public repositories)
-* branching and merging work
+* branching, merging, and commit functions
 
 Project Overview
 ----------------
