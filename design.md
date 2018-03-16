@@ -220,8 +220,8 @@ Flow of events
 
 
 #### Requirements-to-use-cases traceability matrix
-|Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| UC9|
-|---------------|---------------|-------|---|-|-|-|-|-|-|-
+|Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| UC9|UC10|
+|---------------|---------------|-------|---|-|-|-|-|-|-|-|-
 |REQ1 ||||||||||
 |REQ2 ||||||||||
 |REQ3 ||||||||||
