@@ -59,7 +59,7 @@ Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
 
-#### Matrix
+#### Requirements-to-use-cases traceability matrix
 |Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| 
 |---------------|---------------|-------|---|-|-|-|-|-|-
 |REQ1 ||	|
