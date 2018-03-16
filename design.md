@@ -77,7 +77,6 @@ REQ20        |Application should allow shared working environment where users in
 
 ### Use Cases  
 ____
-
 | Use Case #1 | Start Task |
 |--|--|
 | Requirements |  |
@@ -85,8 +84,9 @@ ____
 | Actor's Goal | Start specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
-| Postconditions | Start through GUI      
- Flow of events   
+| Postconditions | Start through GUI |   
+
+Flow of events   
 1.--> User hits button    
 2.<-- Database finds related task and runs start()  
 
@@ -98,7 +98,8 @@ ____
 | Actor's Goal | Finish specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
-| Postconditions | stop task through GUI       
+| Postconditions | stop task through GUI|   
+
  Flow of events    
 1.--> User hits button  
 2.<-- Database finds related task and runs stop()  
@@ -111,7 +112,8 @@ ____
 | Actor's Goal | Edit specified task (any of the items within task) |
 | Participating Actors | Database, user |
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
-| Postconditions | edit task through GUI    
+| Postconditions | edit task through GUI|  
+
 Flow of events  
 1.--> admin hits button  
 2.<-- Database finds related task and runs edit(specified object)  
@@ -124,7 +126,8 @@ Flow of events
 | Actor's Goal | Add estimated time of completion for task (seen by admin) |
 | Participating Actors | Database, user, admin |
 | Preconditions | User types in entry box to specify time |
-| Postconditions | Reflected on GUI   
+| Postconditions | Reflected on GUI|   
+
 Flow of events  
 1.--> User edits text in box  
 2.<-- Database finds related task and runs edit(estimated time)  
@@ -183,8 +186,7 @@ Flow of events
 
  Flow of events   
  1.<-- User selects logout.    
- 2.--> program saves required info and logs out the user.     
-
+ 2.--> program saves required info and logs out the user.  
 
 #### Requirements-to-use-cases traceability matrix
 |Requirements	|	Priority| UC1 | UC2 | UC3 | UC4 | UC5 | UC6| UC7| UC8| 
