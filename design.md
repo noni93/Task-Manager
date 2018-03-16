@@ -103,7 +103,20 @@ ____
 
  Flow of events   
  1.<-- User selects summary.  
- 2.--> Program returns required/available information for task.  
+ 2.--> Program returns required/available information for task. 
+ 
+  | Use Case # | Task Priority |
+|--|--|
+| Requirements | Req2,Req7, Req19 |
+| Initiating Actor | Employee |
+| Actor's Goal | Work on the task that has higher priority|
+| Participating Actors | Database, Manager |
+| Preconditions | task should exist in database, and priority to be provided by manager|
+| Postconditions | employee gets the priority about certain task |   
+
+ Flow of events   
+ 1.<-- User selects task priority.    
+ 2.--> Program returns priority for task if set by manager.  
 
 
 #### Requirements-to-use-cases traceability matrix
