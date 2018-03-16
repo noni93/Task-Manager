@@ -77,10 +77,15 @@ REQ20        |Application should allow shared working environment where users in
 
 ### Use Cases  
 ____
-First Header | Second Header
------------- | -------------
-Content cell 1 | Content cell 2
-Content column 1 | Content column 2
+
+| Use Case #1 | task name |
+|--|--|
+| Initiating Actor |  |
+| Actor's Goal |  |
+| Participating Actors |  |
+| Preconditions |  |
+| Postconditions |  |
+| Flow of events |  |
 
 
 #### Matrix
