@@ -85,7 +85,7 @@ ____
 | Actor's Goal | Start specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
-| Postconditions | Start through GUI |  
+| Postconditions | Start through GUI      
  Flow of events   
 1.--> User hits button    
 2.<-- Database finds related task and runs start()  
@@ -98,7 +98,7 @@ ____
 | Actor's Goal | Finish specified task with required specifications |
 | Participating Actors | Database, user |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
-| Postconditions | stop task through GUI |  
+| Postconditions | stop task through GUI       
  Flow of events    
 1.--> User hits button  
 2.<-- Database finds related task and runs stop()  
@@ -111,7 +111,7 @@ ____
 | Actor's Goal | Edit specified task (any of the items within task) |
 | Participating Actors | Database, user |
 | Preconditions | Admin sees list of items on their page with corresponding "edit" button |
-| Postconditions | edit task through GUI   
+| Postconditions | edit task through GUI    
 Flow of events  
 1.--> admin hits button  
 2.<-- Database finds related task and runs edit(specified object)  
