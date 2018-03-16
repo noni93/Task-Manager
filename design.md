@@ -22,6 +22,14 @@ Product Review
 * contains access rights (private and public repositories)
 * branching, merging, and commit functions
 
+***Google Calendar (web/app)***
+* Purpose: calendar to keep track of events
+* View: contains day, week, month, and year view of calendar
+* Functions: allows user to add events to calendar
+    - events can be given name and description
+    - allows user to set event duration (start date and end date)
+    - allows user to set reminders
+
 The google calendar app reminds and also saves events for the user. It tracks time through the julian calendar as well as the current time on the users device. For daily usage the app is used to store reminders, birthdays, and holidays. Sometimes it is also used to plan events and organize one's social life. 
 
 Project Overview
