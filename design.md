@@ -80,6 +80,7 @@ ____
 
 | Use Case #1 | task name |
 |--|--|
+| Requirements |  |
 | Initiating Actor |  |
 | Actor's Goal |  |
 | Participating Actors |  |
