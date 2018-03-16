@@ -22,8 +22,12 @@ Product Review
 * contains access rights (private and public repositories)
 * branching, merging, and commit functions
 
+The google calendar app reminds and also saves events for the user. It tracks time through the julian calendar as well as the current time on the users device. For daily usage the app is used to store reminders, birthdays, and holidays. Sometimes it is also used to plan events and organize one's social life. 
+
 Project Overview
 ----------------
+Taking into consideration the functionality of the google calendar app and a task managing app, it would be great for employees in a company to have a task managing system like the google calendar. They would have similar functions like the google calendar as well as a task timing functions to help manage their work.  
+
 * Task organizer for the average employee.
 * Three accounts associated with this prodcut; manager, employee, and dev account
 * Manager can use this product to manage employee productivity.
