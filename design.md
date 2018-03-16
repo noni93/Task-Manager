@@ -77,16 +77,19 @@ REQ20        |Application should allow shared working environment where users in
 
 ### Use Cases  
 ____
-
-| Use Case #1 | task name |
+| Use Case # | Create Account/Login |
 |--|--|
-| Requirements |  |
-| Initiating Actor |  |
-| Actor's Goal |  |
-| Participating Actors |  |
-| Preconditions |  |
-| Postconditions |  |
-| Flow of events |  |
+| Requirements | Req1,Req4 |
+| Initiating Actor | Manager,Employee |
+| Actor's Goal | Creates account, and Login into the account with valid credentials |
+| Participating Actors | Database |
+| Preconditions | Valid employee/manager username  and password|
+| Postconditions | Use task manager as desired |
+ Flow of events   
+ 1.--> Program launches  
+ 2.<-- Username and password required    
+ 3.--> User enters credentials  
+ 4.<-- if valid credential, then user able to use task Manager  
 
 
 #### Requirements-to-use-cases traceability matrix
