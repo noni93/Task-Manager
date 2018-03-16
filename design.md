@@ -81,9 +81,9 @@ ____
 | Use Case #1 | Start Task |
 |--|--|
 | Requirements | Req1,Req4 |
-| Initiating Actor | User/Admin |
+| Initiating Actor | Employee, manager|
 | Actor's Goal | Start specified task with required specifications |
-| Participating Actors | Database, user |
+| Participating Actors | Database |
 | Preconditions | User sees button named "Start Task" on main page of website (after login) |
 | Postconditions | Start through front end |  
   
@@ -95,9 +95,9 @@ Flow of events
 | Use Case #2 | Stop Task |
 |--|--|
 | Requirements | Req1,Req4 |
-| Initiating Actor | User/Admin |
+| Initiating Actor | employee,manager |
 | Actor's Goal | Finish specified task with required specifications |
-| Participating Actors | Database, user |
+| Participating Actors | Database |
 | Preconditions | User sees button named "Stop Task" on main page of website (after login) |
 | Postconditions | stop task through front end |   
  
@@ -109,14 +109,14 @@ Flow of events
 | Use Case #3 | Edit Task |
 |--|--|
 | Requirements | Req6,Req5,Req9 |
-| Initiating Actor | Admin |
+| Initiating Actor | manager |
 | Actor's Goal | Edit specified task (any of the items within task) |
-| Participating Actors | Database, user |
-| Preconditions | Admin sees list of items on their page with corresponding "edit" button |
+| Participating Actors | Database, employee |
+| Preconditions | manager sees list of items on their page with corresponding "edit" button |
 | Postconditions | edit task through front end |  
   
 Flow of events  
-1.--> admin hits button  
+1.--> manager hits button  
 2.<-- Database finds related task and runs edit(specified object)  
 3.--> data is changed and displayed  
 
@@ -124,14 +124,14 @@ Flow of events
 | Use Case #4 | Add Estimated Time |
 |--|--|
 | Requirements | Req6,Req14,Req17 |
-| Initiating Actor | User |
-| Actor's Goal | Add estimated time of completion for task (seen by admin) |
-| Participating Actors | Database, user, admin |
-| Preconditions | User types in entry box to specify time |
+| Initiating Actor | employee |
+| Actor's Goal | Add estimated time of completion for task (seen by manager) |
+| Participating Actors | Database, manager |
+| Preconditions | employee types in entry box to specify time |
 | Postconditions | Reflected on front end |  
  
  Flow of events  
- 1.--> User edits text in box  
+ 1.--> employee edits text in box  
 2.<-- Database finds related task and runs edit(estimated time)  
 3.--> data is changed and displayed  
 
@@ -139,15 +139,15 @@ Flow of events
 | Use Case #5 | Assign Task |
 |--|--|
 | Requirements | Req6,Req14,Req17,Req11,Req12,Req1 |
-| Initiating Actor | Admin |
-| Actor's Goal | Assign task to specific user |
-| Participating Actors | Database, user, admin |
-| Preconditions | Admin clicks "assign" button |
+| Initiating Actor | manager |
+| Actor's Goal | Assign task to specific employee|
+| Participating Actors | Database,employee|
+| Preconditions | manager clicks "assign" button |
 | Postconditions | Reflected on front end |  
  
 Flow of events  
-1.--> admin adds user to box and clicks "assign"  
-2.<-- Database finds related user and runs assign(user)   
+1.--> manager adds employee to box and clicks "assign"  
+2.<-- Database finds related employee and runs assign(employee)   
 3.--> data is changed and displayed  
 
 
