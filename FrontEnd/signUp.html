@@ -24,7 +24,7 @@
   <h1>Registration</h1>
   <p>Fill in all the fields.</p>    
 </div>
-<form action="" onsubmit = "information()">
+<form onsubmit = "return information()">
 
 <div class="container">
  <div class="form-group">
@@ -66,6 +66,7 @@
 </form>
 </div>
 
+
 <script>
 function information() {
     var name = document.getElementById("name").value;
@@ -76,11 +77,6 @@ function information() {
 	var password = document.getElementById("password").value;
 	var repassword = document.getElementById("repassword").value;
     submitOK = "true";
-
-    if (fname.length > 10) {
-        alert("The name may have no more than 10 characters");
-        submitOK = "false";
-    } 
 
     if (password != repassword) {
         alert("Passwords do not match");
@@ -95,7 +91,22 @@ function information() {
     if (submitOK == "false") {
         return false;
     }
+	if(submitOK == "true"){
+		var person = new account(name, company, companyid, username, password, email);
+        alert("Name: " + person.name + "Company: " + person.company + "Comapny ID: " + person.companyid + "Username: " + person.username + "Password: " + person.passwword + "E-mail: " + person.email); 
+	}
 }
+
+function account(name, company, companyid, username, password, email) {
+    this.name = name;
+    this.company = comapny;
+    this.companyid = companyid;
+    this.username = username;
+    this.password = password;
+    this.email = email;
+    }
+	
+
 </script>
 
 
