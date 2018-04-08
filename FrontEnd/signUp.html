@@ -17,53 +17,87 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   
 <div class="container">
   <h1>Registration</h1>
   <p>Fill in all the fields.</p>    
 </div>
+<form action="" onsubmit = "information()">
 
 <div class="container">
  <div class="form-group">
     <label for="name">Name:</label>
-    <input type="name" class="form-control" id="name">
+    <input type="name" class="form-control" id="name" required>
   </div>
 
-<form action="/action_page.php">
  <div class="form-group">
     <label for="company">Company:</label>
-    <input type="company" class="form-control" id="company">
+    <input type="company" class="form-control" id="company" required>
   </div>
   
    <div class="form-group">
     <label for="companyid">Company ID:</label>
-    <input type="companyid" class="form-control" id="companyid">
+    <input type="companyid" class="form-control" id="companyid" required>
   </div>
   
   <div class="form-group">
     <label for="username">Username:</label>
-    <input type="username" class="form-control" id="username">
+    <input type="username" class="form-control" id="username" required>
   </div>
   
   <div class="form-group">
     <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+    <input type="email" class="form-control" id="email" required>
   </div>
   
   <div class="form-group">
     <label for="password">Password:</label>
-    <input type="password" class="form-control" id="password">
+    <input type="password" class="form-control" id="password" required>
   </div>
   
   <div class="form-group">
     <label for="password">Re-enter Password:</label>
-    <input type="password" class="form-control" id="password">
+    <input type="password" class="form-control" id="repassword" required>
   </div>
  
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </div>
+
+<script>
+function information() {
+    var name = document.getElementById("name").value;
+	var company = document.getElementById("company").value;
+    var companyid = document.getElementById("companyid").value;
+	var username = document.getElementById("username").value;
+	var at = document.getElementById("email").value.indexOf("@");
+	var password = document.getElementById("password").value;
+	var repassword = document.getElementById("repassword").value;
+    submitOK = "true";
+
+    if (fname.length > 10) {
+        alert("The name may have no more than 10 characters");
+        submitOK = "false";
+    } 
+
+    if (password != repassword) {
+        alert("Passwords do not match");
+        submitOK = "false";
+    }
+
+    if (at == -1) {
+        alert("Not a valid e-mail!");
+        submitOK = "false";
+    }
+
+    if (submitOK == "false") {
+        return false;
+    }
+}
+</script>
+
 
 </body>
 </html>
