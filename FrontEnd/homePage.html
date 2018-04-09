@@ -38,8 +38,8 @@
 	  or time to complete their projects, share feedback on 
 	  projects and associated tasks. The main user of this web
 	  application will be ultimately corporations with distributed 
-	 <button  onclick="myFunction('hidesection')">Read More &raquo;</button>
-	 <div id="hidesection">
+	 <button  id="show_button" onclick="myFunction('hidesection') ">Read More &raquo;</button>
+	 <div id="hidesection" >
 	and dynamic usage of this web app across different 
 	 teams within those corporations . This web app will allow
 	 the employees to propose certain task with its priority, start and estimated stop dates, description, and much more attributes, which then will be approved and assigned appropriately by managers. This web app will allow all users to track their progress on their respective projects as well as team and the whole corporation projects. All team members on this project have been divided to solve certain problems about this application and then finally coming together to combine all optimized solutions to build this application. The teamwork and the passion to solve real world problem are two most important factors that motivate us to solve this problem using software engineering principles and best practices and ultimately improve our problem-solving skills.</p>
@@ -69,12 +69,17 @@ Front-end side will have user interactions components such as dashboard, login a
 
 </body>
 <script type= "text/javascript">
+$("#hidesection").hide();
+$("#another_section").hide();
+
 function myFunction(id) {
 var x = document.getElementById(id);
 	if(x.style.display == 'none')
 		x.style.display = 'block';
 	else 
 		x.style.display = 'none';
+		
+	
   
 }
 
