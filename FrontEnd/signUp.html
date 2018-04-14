@@ -66,21 +66,31 @@
     <label for="lastname">Last Name:</label>
     <input type="text" class="form-control" id="lastname" name = "lastname"required>
   </div>
+    <div class="form-group">
+    <label for="title">Position Title:</label>
+    <input type="text" name = "title" class="form-control" id="title" required>
+  </div>
   <div class="form-group">
     <label for="username">Username:</label>
     <input type="text" class="form-control" id="username" name = "username"required>
   </div>
   
   <div class="form-group">
-    <label for="department">Department:</label>
+    <label for="department">Department/Team:</label>
     <input type="text" class="form-control" name = "department" id="department" required>
   </div>
-  
+    <div class="form-group">
+    <label for="workphone">Company Phone Number:</label>
+    <input type="text" name = "workphone" class="form-control" id="workphone" required>
+  </div>
   <div class="form-group">
     <label for="email">Work Email Address:</label>
     <input type="email" name = "email" class="form-control" id="email" required>
   </div>
-  
+    <div class="form-group">
+    <label for="location">Location: </label>
+    <input type="text" name = "location" class="form-control" id="location" required>
+  </div>
   <div class="form-group">
     <label for="password">Password:</label>
     <input type="password" name = "password" class="form-control" id="password" required>
@@ -150,7 +160,7 @@ function account(name, company, companyid, username, password, email) {
     this.username = username;
     this.password = password;
     this.email = email;
-    }
+}
 	
 
 </script>
