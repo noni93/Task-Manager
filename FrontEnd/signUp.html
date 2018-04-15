@@ -26,7 +26,7 @@
   <h1>Company Information</h1>
   <p style="color:red">* Fill in all the fields.</p>    
 </div>
-<form action ="registration.txt" onsubmit = "return information()">
+<form action ="loginPage.html" onsubmit = "return information()">
 
 <div class="container">
 
@@ -129,7 +129,7 @@ function information() {
 	var address = document.getElementById("address").name;
 	var num = 0;
 	var sym = 0;
-	
+	var person = new account(name, company, companyid, username, password, email);
     submitOK = "true";
 
     if (password != repassword) {
@@ -154,9 +154,6 @@ function information() {
     if (submitOK == "false") {
         return false;
     }
-	if(submitOK == "true"){
-		var person = new account(name, company, companyid, username, password, email);
-	}
 }
 
 function account(name, company, companyid, username, password, email) {
