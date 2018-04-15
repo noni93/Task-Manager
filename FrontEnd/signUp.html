@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!--This is the header portion of the webpage it will be placed on al lthe pages we make-->
+<!--This is the header portion of the webpage it will be placed on all the pages we make-->
 <div class="container">
   <h2>4 Task Management Inc.</h2>
   <div class="btn-group btn-group-justified">
@@ -142,9 +142,10 @@ function information() {
 	}
 	for(var i = 0; i < password.length; i ++){
 		if(password.charAt(i) == "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0"){num++;}
-		if(password.charAt(i) ==){}
-		if(password.charAt(i) ==){}
+		if(password.charAt(i) == "!" || "@" || "#" || "$" || "%" || "^" || "&" || "*" ){sym++;}
 	}
+	if (num < 1){alert( "Password must contain a number and symbol"); submitOK = "false";}
+	if(sym < 1){alert( "Password must contain a number and symbol"); submitOK = "false";}
     if (at == -1) {
         alert("Not a valid e-mail!");
         submitOK = "false";
@@ -155,13 +156,12 @@ function information() {
     }
 	if(submitOK == "true"){
 		var person = new account(name, company, companyid, username, password, email);
-        alert("Name: " + person.name + "Company: " + person.company + "Comapny ID: " + person.companyid + "Username: " + person.username + "Password: " + person.passwword + "E-mail: " + person.email); 
 	}
 }
 
 function account(name, company, companyid, username, password, email) {
     this.name = name;
-    this.company = comapny;
+    this.company = company;
     this.companyid = companyid;
     this.username = username;
     this.password = password;
