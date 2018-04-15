@@ -127,6 +127,9 @@ function information() {
 	var department = document.getElementById("department").name;
 	var phone = document.getElementById("phone").name;
 	var address = document.getElementById("address").name;
+	var num = 0;
+	var sym = 0;
+	
     submitOK = "true";
 
     if (password != repassword) {
@@ -138,7 +141,9 @@ function information() {
 		submitOK= "false";
 	}
 	for(var i = 0; i < password.length; i ++){
-		
+		if(password.charAt(i) == "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0"){num++;}
+		if(password.charAt(i) ==){}
+		if(password.charAt(i) ==){}
 	}
     if (at == -1) {
         alert("Not a valid e-mail!");
