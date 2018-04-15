@@ -23,6 +23,8 @@ Progress Report
 
 What use cases have been implemented? 
 What is already functional, what is currently being tackled?
+	*Currently the website is cosmetically intact, it is visually ready.
+	*Some adjustments need to be made with the javascript.
 
 Plan of Work
 
