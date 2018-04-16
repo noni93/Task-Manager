@@ -11,7 +11,19 @@ Your goal here is not to replicate your implementation, but to provide a documen
 
 Algorithms and Data Structures
 ------------------------------
-If your system has any complex algorithms, e.g., statistical inference, you will ned to describe them in detail here. You will also need to describe your data model in detail here. How are you storing your data and why? How do your choices mitigate issues that we faced in our original implementation of TM.  
+To optimize our performace on managing tasks and users, we have decided to use various algorithms and data structures to optimize the performance of many fucntionalities in the system.
+Here for our data model, we are separating the users and tasks as two problems to solve for this system. For user data model, we have a company and its specified admin, and then 
+managers of different teams, and then members of those different teams. For data model, we are creating user model/object which contains all necessary information about an employee in 
+the company and role and title fields in user model acts to differentiate between admin, managers, and team members. Further, this user model is injected as dependency to Company model
+which has information about the company and its users as in the database we have different table of users of different companies( For example, if company is google then table with name 
+"GoogleUsers" is created in the database, and then all columns are just attributes about users (name, role, email, etc..) and each row is record of a user). For tasks,we have TaskModel 
+which contains all of tasks attributes (task id, task priority, task start and stop times, task progress, task description, which team this task belongs to). Task ID is injected to the 
+model in such a way that it differentiates the tasks of different teams in the one common task table in the database. One of the major problems that we come across is to schedule tasks 
+as we have features that automatically schedules tasks for a given day, and for that we are using Priority Queue that uses task priority attribute of the task model to schedule tasks that
+are scheduled for a given day. We are using Heaps (heap sort) to arrange the tasks based on their (times, priority, task size) when they are displayed in the list view. We are also
+tryig to build a statistical model that learns how to prioritize tasks based on the data provided by users (we are not sure if we will be able to get this done). TM implementation before 
+didn't really allow to flexibly use data structures as every interaction was being done directly with file, so these choices will allow us flexibly to manage program complexity and 
+solve any issues we come up in the best and quick way possible. 
 
 
 User Interface Design and Implementation
