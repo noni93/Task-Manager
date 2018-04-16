@@ -257,3 +257,10 @@ Flow of events
 |REQ20|||||||||||
 |Max PW||6|6|3|4|3|6|6|2|5|5|
 |Total PW||11|11|6|9|18|12|3|16|13|9|
+
+
+
+
+
+
+![Test Photo](testphoto.png)
