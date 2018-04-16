@@ -7,6 +7,16 @@ Due to increase in the complexity of projects, it has become increasingly import
 
 Product Review
 ---------------
+
+
+***Task Manager (2do - iOS App)***
+* Purpose: to help manage everyday tasks in an easy-to-understand calendar based format
+    - tasks can be split into different categories (ie work, school, etc)
+* View: Calandar screen which allows you to navigate days and edit tasks per that day
+    - Create, edit, begin/end task
+    - Main display shows task title. Once title is clicked, all necessary info is displayed
+* Relation to Project: Gives us an idea of how to separate our tasks by company
+
 ***Recorder (Android app)***
 * Purpose: to record sounds, contains option for recording sound in different environment
     - normal, meeting, interview, concert mode setting
