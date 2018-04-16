@@ -3,10 +3,20 @@ Group Project Design
 
 Introduction
 ---------------------
-Due to increase in the complexity of projects, it has become increasingly important for today’s corporations to optimize their workload and available resources to effectively achieve their project goals. The goal of our project is to create a task management web application for corporations to manage their projects, meet deadlines, track their progress on approved projects, prioritize their projects to effectively use available resources and budget or time to complete their projects, share feedback on projects and associated tasks.  The main user of this web application will be ultimately corporations with distributed and dynamic usage of this web app across different teams within those corporations . This web app will allow the employees to propose certain task with its priority, start and estimated stop dates, description, and much more attributes, which then will be approved and assigned appropriately by managers. This web app will allow all users to track their progress on their respective projects as well as team and the whole corporation projects. All team members on this project have been divided to solve certain problems about this application and then finally coming together to combine all optimized solutions to build this application. The teamwork and the passion to solve real world problem are two most important factors that motivate us to solve this problem using software engineering principles and best practices and ultimately improve our problem-solving skills.
+Due to increase in the complexity of projects, it has become increasingly important for today’s corporations to optimize their workload and available resources to effectively achieve their project goals. The goal of our project is to create a task management web application for corporations to manage their projects, meet deadlines, track their progress on approved projects, prioritize their projects to effectively use available resources and budget or time to complete their projects, share feedback on projects and associated tasks.  The main user of this web application will be ultimately corporations with distributed and dynamic usage of this web app across different teams within those corporations . This web app will allow the employees to propose certain task with its priority, start and estimated stop dates, description, and much more attributes, which then will be approved and assigned appropriately by managers. This web app will allow all users to track their progress on their respective projects as well as team and the whole corporation projects.
 
 Product Review
 ---------------
+
+
+***Task Manager (2do - iOS App)***
+* Purpose: to help manage everyday tasks in an easy-to-understand calendar based format
+    - tasks can be split into different categories (ie work, school, etc)
+* View: Calandar screen which allows you to navigate days and edit tasks per that day
+    - Create, edit, begin/end task
+    - Main display shows task title. Once title is clicked, all necessary info is displayed
+* Relation to Project: Gives us an idea of how to separate our tasks by company
+
 ***Recorder (Android app)***
 * Purpose: to record sounds, contains option for recording sound in different environment
     - normal, meeting, interview, concert mode setting
@@ -69,10 +79,10 @@ REQ13        |Application should provide alternatives to overcome some restricti
 REQ14		 |Application should be able to generate summaries for all type of tasks,i.e., in progress tasks, completed tasks, and pending tasks.
 REQ15        |Application should allow the successful logout.
 REQ16        |Application should have timeline feature which allows users to manage their pace on tasks in progress
-REQ17        |Application should display different visualizations like graphs representing the amount of completion of a certain task. 
-REQ 18       |Application should allow dynamic registration criteria for corporations which can then distribute the usage of this app to teams where managers are generally admins and employees are users
-REQ 19       |Application should give managers enough admin rights, such as changing due dates, deleting tasks, updating tasks, updating priorities, etc.
-REQ20        |Application should allow shared working environment where users in a given team can track all tasks of that team, chat with each other, provide feedback, etc.
+REQ17        |Application should display a graph for statistical data. Statistical data will be time of completion average. 
+REQ 18       |Application should allow dynamic registration criteria for corporations
+REQ 19       |Application should give managers enough admin rights, such as changing due dates, deleting tasks, updating tasks, updating priorities
+REQ20        |Application should allow shared working environment where users in a given team can track all tasks of that team, chat with each other, provide feedback
 
 
 ### Use Cases  
