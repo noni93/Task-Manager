@@ -302,6 +302,8 @@ Finally, these all we have so far for our system design.
 Check the resources folder for class diagrams (NOT FINAL ONES, WE ARE STILL BRAINSTORMING SOME RELATIONSHIPS AND CLASSES):
 UserClassDiagram.png
 TaskClassDiagram.png
+
+--> Algoritms and DS
 Algorithms and Data Structures
 ------------------------------
 To optimize our performace on managing tasks and users, we have decided to use various algorithms and data structures to optimize the performance of many fucntionalities in the system.
@@ -333,7 +335,8 @@ visibility are maintained. We implemented different BOOTSTRAP Framework componen
 We also implemented card layout design aspect of BOOTSTRAP to layout different components in one line, thus enabling us to implement good navigation in the page and users can readily 
 access many things on the page from just the Single Page. Finally, all this design aspects led us to one main thing "Responsive Web Design". We implemented responsive web design to
 accomplish all of our goals mentioned above and now our web pages scale nicely to any screen size. Thanks to BOOTSTRAP!! 
-Progress Report and Plan of Work
+
+--> Progress Report and Plan of Work
 Progress Report
 ----------------
 |Front End | The user interface on our web application is mostly done. We currently have the front page introducing out=r  site, and we have the sign in and log in pages ready to hook up to the data base. We still need to create the interface where the user will interact with our program. These tasks will be done when the backend is ready to be hooked up.|
