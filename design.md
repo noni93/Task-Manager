@@ -299,7 +299,7 @@ For example, if manager approves the given task for his/her team then ManageTask
 approved, so the team can start working on that task.
 Finally, these all we have so far for our system design.
 
-Check the resources folder for class diagrams:
+Check the resources folder for class diagrams (NOT FINAL ONES, WE ARE STILL BRAINSTORMING SOME RELATIONSHIPS AND CLASSES):
 UserClassDiagram.png
 TaskClassDiagram.png
 Algorithms and Data Structures
