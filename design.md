@@ -299,6 +299,7 @@ For example, if manager approves the given task for his/her team then ManageTask
 approved, so the team can start working on that task.
 Finally, these all we have so far for our system design.
 
+<img src = "C:\Users\Akshar\S3T4TM2\resources\UserClassDiagram.png" />
 Algorithms and Data Structures
 ------------------------------
 To optimize our performace on managing tasks and users, we have decided to use various algorithms and data structures to optimize the performance of many fucntionalities in the system.
