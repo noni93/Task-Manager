@@ -5,15 +5,15 @@ This section should included your detailed list of responsibilities, association
 System Design
 --------------
 
-As discusses in the part 1 of design document, we decided to implement the client/server architectural style for this system. We also have chosed MVC architure which gives us a lot of 
+As discussed in the part 1 of design document, we decided to implement the client/server architectural style for this system. We also have chosed MVC architure which gives us a lot of 
 flexibitly in drawing out relationships between different components. We are using Java Spring MVC controllers to process the form data and does all work with it and then add it to 
 model whih then used by Spring MVC view templates to display the results. For example, for users problem 
 we generally have two sub components 
 User{
 	name, email, role, work phone, etc. 
-}
+}. And 
 Admin extends User {} but role is Admin (Admin is a user)
-Similrly Manager and Team Employee/Member are Users (extends User) with their respective roles.
+Similarly Manager and Team Employee/Member are Users (extends User) with their respective roles.
 Then we have Company{
 	All company information
 	
@@ -25,7 +25,14 @@ if validation is right then it will send the User information to the database an
 on whether it passed the validation and added User object successfully to database or not. 
 This relationship and responsibilities of validation and User accesses is same for LoginController except that it now access the database to read and not to write to it. 
 There are also some classes that we haven't come across yet but we will know about them as we proceed in the development process. 
-
+For Task problems,
+We have Task Class which contains attributes describing tasks which then depends User class which provides it information about the team or department that this task belongs to.
+We have ScheduleTasks class which depends on PrioritizeTasks class to get information about task priorities which then depends on Task object itself to access task's attributes such
+as priority, start and stop times, etc.
+Task class also depends on the ManageTasks class which serves as a communication channel between user's proposed tasks and managers of that team that have rights to manage tasks.
+For example, if manager approves the given task for his/her team then ManageTasks will be notified about this which then will talk to Task object to change its status attribute to 
+approved, so the team can start working on that task.
+Finally, these all we have so far for our system design.
 
 Algorithms and Data Structures
 ------------------------------
