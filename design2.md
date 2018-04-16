@@ -1,6 +1,10 @@
 Domain Model
 --------------
-This section should included your detailed list of responsibilities, associations, and attributes as described in the slides on domain analysis. It must also include a fully detailed domain model.  This should flow naturally from your existing work on use cases and research on existing products.  Include as many diagrams as are necessary to convey your model. I'm more concerned that you have fully fleshed out the responsibilities and their relationships than you have pretty pictures. 
+
+
+![Test Photo](domainmodel.jpg)
+
+
 
 System Design
 --------------
