@@ -327,9 +327,12 @@ Sun Microsystems, Inc. Java Look and Feel Design Guidelines. Mountain View, CA, 
 Progress Report and Plan of Work
 Progress Report
 ----------------
-|Front End | The user interface on our web application is mostly done. We currently have the front page introducing out site, and we have the sign in and log in pages ready to hook up to the data base. We still need to create the interface where the user will interact with our program. These tasks will be done when the backend is ready to be hooked up.|
+|Front End | The user interface on our web application is mostly done. We currently have the front page introducing out=r  site, and we have the sign in and log in pages ready to hook up to the data base. We still need to create the interface where the user will interact with our program. These tasks will be done when the backend is ready to be hooked up.|
 
-|Back End | |
+|Back End | So far, in the backend side, the classea and dependencies have been coded and injected to successfully create a User Object which will going into database when user submits
+data from registration html page. Currently, working on reading form data and parse it to match the User object and then using UserRegistrationController to register the user and 
+then create a Spring MVC view template that will display success or error message depending on whether the form fields passed the validation and they have been added to database 
+or not.
 
 
 What use cases have been implemented?
