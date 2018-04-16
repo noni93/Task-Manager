@@ -299,7 +299,9 @@ For example, if manager approves the given task for his/her team then ManageTask
 approved, so the team can start working on that task.
 Finally, these all we have so far for our system design.
 
-<img src = "C:\Users\Akshar\S3T4TM2\resources\UserClassDiagram.png" />
+Check the resources folder for class diagrams:
+UserClassDiagram.png
+TaskClassDiagram.png
 Algorithms and Data Structures
 ------------------------------
 To optimize our performace on managing tasks and users, we have decided to use various algorithms and data structures to optimize the performance of many fucntionalities in the system.
@@ -318,12 +320,19 @@ solve any issues we come up in the best and quick way possible. Thus, finally we
 
 
 User Interface Design and Implementation
------------------------------------------
-Describe whether and how you modified and implemented the initial screen mock-ups developed in assignment 1. If you didn't implement any mockups then, you will need to do so now.  
-The textbook does not deal much with the GUI design. Excellent guidelines for GUI design can be found here: 
-Sun Microsystems, Inc. Java Look and Feel Design Guidelines. Mountain View, CA, 1999. Available at: http://java.sun.com/products/jlf/ed2/book/ (Links to an external site.)Links to an external site.
-"Ease-of-use" is generally considered the key characteristic of user interface. "Ease-of-use" should not be confused with a flashy interface, with lots of colors, picture, graphics, etc. On the contrary, you should avoid flashy user interfaces. "Ease-of-use" means that interface is intuitive, easy to understand and operate, without having to ask many questions or read voluminous documentation. A minimal user interface that is well organized should be sufficient. You should strive to minimize the user effort, thus maximizing the "ease-of-use".
-
+----------------------------------------
+First of all, we decided to just use static web pages for the user interface and design and we did not really focus on it as we heavily focused on the backend logic. From the assignment 1, 
+we decided to implement different front end pages with good visibility and flexible interaction with buttons and form elements, but as we started coding and development process, we 
+realized that we needed a more flexible web design that we had. The first modification to the UI design was the alignment of different components in our web pages. We made sure that
+no matter what, the alignment of any HTML element should not change and adjusts itself to align accordingly. For example, our submit button stays in the center of any device screen.
+We also made sure that instead of creating different UI designs for different pages, we implemented some common features into one page and some stays disappear until we do not need them
+and appears when we need them. For example, if a user clicks "Forgot my password", then it will take user to new page where there will be form field to type email and when user clicks
+"Submit Email" button disappearsm, and new form field appears asking for "Valid code" emailed to that user and once user submits the code, the code form field disappears and an error 
+message appears if code is invalid or a new form field appears which allows "Password Reset". We also decided to interlink many components within the same page, so readability and
+visibility are maintained. We implemented different BOOTSTRAP Framework components to customize our web page design, which made it easy for us to debug any design issue and solve it.
+We also implemented card layout design aspect of BOOTSTRAP to layout different components in one line, thus enabling us to implement good navigation in the page and users can readily 
+access many things on the page from just the Single Page. Finally, all this design aspects led us to one main thing "Responsive Web Design". We implemented responsive web design to
+accomplish all of our goals mentioned above and now our web pages scale nicely to any screen size. Thanks to BOOTSTRAP!! 
 Progress Report and Plan of Work
 Progress Report
 ----------------
