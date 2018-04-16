@@ -24,9 +24,9 @@ Sun Microsystems, Inc. Java Look and Feel Design Guidelines. Mountain View, CA, 
 Progress Report and Plan of Work
 Progress Report
 ----------------
-Front end: The user interface on our web application is mostly done. We currently have the front page introducing out site, and we have the sign in and log in pages ready to hook up to the data base. We still need to create the interface where the user will interact with our program. These tasks will be done when the backend is ready to be hooked up.
+|Front End | The user interface on our web application is mostly done. We currently have the front page introducing out site, and we have the sign in and log in pages ready to hook up to the data base. We still need to create the interface where the user will interact with our program. These tasks will be done when the backend is ready to be hooked up.|
 
-Back end:
+|Back End | |
 
 
 What use cases have been implemented?
@@ -39,6 +39,7 @@ What is already functional, what is currently being tackled?
 	*Some adjustments need to be made with the javascript.
 
 Plan of Work
+------------
 
  | Week| Task |
 |--|--|
@@ -48,6 +49,7 @@ Plan of Work
 | 3 | Housekeeping| 
 
 Breakdown of Responsibilities
+----------------------------
 
 Our responsiblities have been divided into two general groups: front-end and back-end.
 
@@ -57,9 +59,11 @@ Currently, Matt is responsible for developing test cases for the classes Akshar 
 
 
 Who will coordiante the integration?
+-------------------------------------
 
 Akshar
 
 Who will perform the testing of the integrated system?
+---------------------------------------------------------
 
 Matt will be developing JUnit tests for each of the classes implemented by the rest of the team.
