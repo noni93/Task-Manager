@@ -23,7 +23,7 @@ as we have features that automatically schedules tasks for a given day, and for 
 are scheduled for a given day. We are using Heaps (heap sort) to arrange the tasks based on their (times, priority, task size) when they are displayed in the list view. We are also
 tryig to build a statistical model that learns how to prioritize tasks based on the data provided by users (we are not sure if we will be able to get this done). TM implementation before 
 didn't really allow to flexibly use data structures as every interaction was being done directly with file, so these choices will allow us flexibly to manage program complexity and 
-solve any issues we come up in the best and quick way possible. 
+solve any issues we come up in the best and quick way possible. Thus, finally we are using different algorithmic approaches to solve different problems within our system.
 
 
 User Interface Design and Implementation
