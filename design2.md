@@ -28,7 +28,12 @@ What is already functional, what is currently being tackled?
 
 Plan of Work
 
-List the projected milestones and dates by which you plan to accomplish them. 
+ | Week| Task |
+|--|--|
+| Current(0) | Finish front-end views; Complete base-level product classes; Complete JUnit test functions for said classes |
+| 1 | Implement back-end to front-end with base level product |
+| 2 | Finish other necessary classes/test cases|
+| 3 | Housekeeping| 
 
 Breakdown of Responsibilities
 
