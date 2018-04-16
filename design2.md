@@ -32,7 +32,19 @@ List the projected milestones and dates by which you plan to accomplish them.
 
 Breakdown of Responsibilities
 
-To the best of your ability, List the names of modules and classes that each team member is currently responsible for developing, coding, and testing
+// To the best of your ability, List the names of modules and classes that each team member is currently responsible for developing, coding, and testing
+//
+
+Akshar: 
+
+Matt:
+
+Jessica:
+
+Tina:
+
+Singh:
+
 
 Who will coordiante the integration?
 
