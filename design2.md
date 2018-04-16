@@ -49,7 +49,3 @@ Akshar
 Who will perform the testing of the integrated system?
 
 Matt will be developing JUnit tests for each of the classes implemented by the rest of the team.
-
-You will NOT get everything right the first (or the second) time. Do you best given your experience and be prepared to revise and adjust for subsequent assignments. 
-
-We will discuss this further in class, and there may be minor updates to the assignment. 
