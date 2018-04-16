@@ -32,9 +32,6 @@ List the projected milestones and dates by which you plan to accomplish them.
 
 Breakdown of Responsibilities
 
-// To the best of your ability, List the names of modules and classes that each team member is currently responsible for developing, coding, and testing
-//
-
 Our responsiblities have been divided into two general groups: front-end and back-end.
 
 The back-end team is Matt and Akshar; whereas the front-end team is Singh, Tina, and Jessica.
