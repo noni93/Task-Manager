@@ -35,15 +35,11 @@ Breakdown of Responsibilities
 // To the best of your ability, List the names of modules and classes that each team member is currently responsible for developing, coding, and testing
 //
 
-Akshar: 
+Our responsiblities have been divided into two general groups: front-end and back-end.
 
-Matt:
+The back-end team is Matt and Akshar; whereas the front-end team is Singh, Tina, and Jessica.
 
-Jessica:
-
-Tina:
-
-Singh:
+Currently, Matt is responsible for developing test cases for the classes Akshar is working on. All of the front-end team are working together using HTML, bootstrap, and JavaScript in order for us to connect the back-end. Once we have all of these items completed we will be splitting up the classes to each group member. This is our top task for our current week.
 
 
 Who will coordiante the integration?
