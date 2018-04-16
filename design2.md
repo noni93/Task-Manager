@@ -4,9 +4,27 @@ This section should included your detailed list of responsibilities, association
 
 System Design
 --------------
-Here we are breaking away from analysis and specifying our design. You should probably have a much better idea with respect to your architecture at this point so weave those decisions into this section. You must include class diagrams that reflect your domain model. They do not have to be super fancy, however.  You should be learning from your design section. Make sure that you are not just doing busy work here. I do expect to see identified responsibilities, relationships, and attributes found in the previous sections reflected in this section as well as in your code. 
 
-Your goal here is not to replicate your implementation, but to provide a document from which somebody else could implement the system that you have designed. Constantly ask yourself whether you are meeting that goal while you are writing. 
+As discusses in the part 1 of design document, we decided to implement the client/server architectural style for this system. We also have chosed MVC architure which gives us a lot of 
+flexibitly in drawing out relationships between different components. We are using Java Spring MVC controllers to process the form data and does all work with it and then add it to 
+model whih then used by Spring MVC view templates to display the results. For example, for users problem 
+we generally have two sub components 
+User{
+	name, email, role, work phone, etc. 
+}
+Admin extends User {} but role is Admin (Admin is a user)
+Similrly Manager and Team Employee/Member are Users (extends User) with their respective roles.
+Then we have Company{
+	All company information
+	
+	//Here Admin is a User Specified by company and it depends on User Class to define Admin
+	--> Dependency User (Admin )
+}
+Then we have controllers such as UserRegistrationController which uses Validator classes to verify user attributes which then depends on User Object to access data to validate and then
+if validation is right then it will send the User information to the database and then sends model to Spring MVC view templates to display the successful or error message depending
+on whether it passed the validation and added User object successfully to database or not. 
+This relationship and responsibilities of validation and User accesses is same for LoginController except that it now access the database to read and not to write to it. 
+There are also some classes that we haven't come across yet but we will know about them as we proceed in the development process. 
 
 
 Algorithms and Data Structures
