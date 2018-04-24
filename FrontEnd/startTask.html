@@ -64,7 +64,7 @@
 					<div >
 					<fieldset>
 						<label for="dtp_input1" class="col-md-2 control-label">Start Time: </label>
-						<div class="input-group date form_datetime col-md-5" data-date="2018-04-18T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+						<div class="input-group date form_datetime col-md-5" data-date="2018-04-24T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
 							<input class="form-control" size="16" type="text" value="" readonly>
 							<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 							<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
@@ -74,13 +74,26 @@
 					
 					<div >
 						<label for="dtp_input2" class="col-md-2 control-label">Stop Time: </label>
-						<div class="input-group date form_datetime col-md-5" data-date="2018-04-18T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input2">
+						<div class="input-group date form_datetime col-md-5" data-date="2018-04-24T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input2">
 							<input class="form-control" size="16" type="text" value="" readonly>
 							<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 							<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
 						</div>
 						<input type="hidden" id="dtp_input2" value="" /><br/>
 					</div>
+					<div><label for="task_describe" class="col-md-2 control-label">Task Description:</label>
+						<input type="text" name="task_describe" placeholder="" id="task_describe" ><br>
+					</div>
+					
+					<div><label for="task_priority" >Task Priority: </label>
+						<select name"task_priority" id="task_priority style="height:25px; width:175px"  align="center">
+						<option>-- Select One --</option>
+						<option>High</option>
+						<option>Medium</option>
+						<option>Low</option>
+						</select>
+					</div>
+					<br><br>
 					
 					<br>
 					<div><input type="submit" value="Submit For Approval" style="height:25px; width:250px"/><br> 
@@ -103,7 +116,7 @@
 				todayHighlight: 1,
 				startView: 2,
 				forceParse: 0,
-				startDate: "2018-04-18 00:00",
+				startDate: "2018-04-24 00:00",
 				showMeridian: 1
 			});
 			$('.form_date').datetimepicker({
