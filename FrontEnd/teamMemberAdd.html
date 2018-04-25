@@ -22,6 +22,7 @@
 
 <body>
   <!-- This is the text field for the registration page -->
+  <form action ="loginPage.html" onsubmit = "return information()">
 <div class="container">
 <div>
   <h1>Team Member Registration</h1>
@@ -81,7 +82,60 @@
 		<Strong>Devs: Akshar, Jessica, Tina, Matt, Singh</Strong>
 	</div>
 </footer>
+<!--function section where all of the javascript goes and actions.-->
+<script>
 
+function information() {
+    var name = document.getElementById("name").name;
+	var company = document.getElementById("company").name;
+    var companyid = document.getElementById("companyid").name;
+	var username = document.getElementById("username").name;
+	var at = document.getElementById("email").name.indexOf("@");
+	var password = document.getElementById("password").name;
+	var repassword = document.getElementById("repassword").name;
+	var department = document.getElementById("department").name;
+	var phone = document.getElementById("phone").name;
+	var address = document.getElementById("address").name;
+	var num = 0;
+	var sym = 0;
+	var person = new account(name, company, companyid, username, password, email);
+    submitOK = "true";
+
+    if (password != repassword) {
+        alert("Passwords do not match");
+        submitOK = "false";
+    }
+	if(password.length < 8){
+		alert("Password length must be atleast 8 characters");
+		submitOK= "false";
+	}
+	for(var i = 0; i < password.length; i ++){
+		if(password.charAt(i) == "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "0"){num++;}
+		if(password.charAt(i) == "!" || "@" || "#" || "$" || "%" || "^" || "&" || "*" ){sym++;}
+	}
+	if (num < 1){alert( "Password must contain a number and symbol"); submitOK = "false";}
+	if(sym < 1){alert( "Password must contain a number and symbol"); submitOK = "false";}
+    if (at == -1) {
+        alert("Not a valid e-mail!");
+        submitOK = "false";
+    }
+
+    if (submitOK == "false") {
+        return false;
+    }
+}
+
+function account(name, company, companyid, username, password, email) {
+    this.name = name;
+    this.company = company;
+    this.companyid = companyid;
+    this.username = username;
+    this.password = password;
+    this.email = email;
+}
+	
+
+</script>
 
 </body>
 </html>
