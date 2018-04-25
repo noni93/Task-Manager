@@ -76,10 +76,10 @@
 								<!--insert data here-->
 								<tr class="odd gradeX">
 									<td>Trident</td>
-									<td>Dummy data, ignore for now</td>
-									<td>Win 95+</td>
-									<td class="center"> 4</td>
-									<td class="center">X</td>
+									<td>button id="mixBut", change button look last </td>
+									<td>button trial 1</td>
+									<td class="center"><input type="button" id="mixBut" value="Start" /></td>
+									<td class="center">need js to make functional</td>
 								</tr>
 								<tr class="even gradeC">
 									<td>Trident</td>
@@ -156,8 +156,25 @@
 
 	<script src="js/custom.js"></script>
 	<script src="js/tables.js"></script>
+	<script>
+		var mixBut = document.getElementById("mixBut");
 
-
+		mixBut.addEventListener("click", Start);
+		
+		function Start(){
+				console.log("Started");
+				mixBut.removeEventListener("click", Start);
+				mixBut.addEventListener("click", Stop);
+				mixBut.value = "Stop";
+		}
+		
+		function Stop(){
+				console.log("Stopped");
+				mixBut.removeEventListener("click", Stop);
+				mixBut.addEventListener("click", Start);
+				mixBut.value = "Start";
+		}
+</script>
 
 
 
