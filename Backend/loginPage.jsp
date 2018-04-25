@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<div class="container">
+  <h2>4 Task Management Inc.</h2>
+
+  <div class="btn-group btn-group-justified">
+    <a href="navigateHome" class="btn btn-primary">Home</a>
+    <a href="profile.html" class="btn btn-primary">Profile</a>
+    <a href="showLogin" class="btn btn-primary">Login</a>
+  </div>
+  
+</div>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+		
+        <title>Login Task Manager</title>
+    </head>
+    <body>
+
+	<br><br><div class="container">
+        <form action="#" method="POST" align="center" name = "login_fourm">
+	    <div><label for="username">Username:</label>
+             <input type="text" name="username" placeholder="Enter Username" id="username"><br>
+        </div>
+
+	    <div><label for="password">Password: </label>
+            <input type="password" name="password" placeholder="Enter password" id="password"><br>
+        <div><label for="company_drop">Company:</label>
+            <select name"comany_drop" id="comany_drop" style="height:25px; width:175px" align="center">
+                <option>-- Select One --</option>
+                <option>dummyName</option>
+                <option>name2</option>
+            </select>
+        </div>
+		<div><label for="role_drop" >Position: </label>
+            <select name"role_drop" id="role_drop" style="height:25px; width:175px"  align="center">
+                <option>-- Select One --</option>
+                <option>Admin</option>
+                <option>Manager</option>
+				<option>Employee</option>
+            </select>
+        </div>
+        <br>
+        <div><input type="submit" value="Login" style="height:25px; width:250px"/><br> 
+        </div>
+
+        </form>
+	</div>
+    <br><br>
+    <div align="center"><p>Don't have an account?</p>
+        <a href="companyregistration/showSignUp">Sign Up</a></div>
+    </body>
+	
+<footer>
+	<div class="container">
+	<hr>
+		<Strong>Devs: Akshar, Jessica, Tina, Matt, Singh</Strong>
+	</div>
+</footer>
+</html>
