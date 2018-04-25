@@ -42,7 +42,7 @@ public class User {
 		return name;
 	}
 	public String toString() {
-		return "FirstName: " + name.split(" ")[0] + "\nLastName: "+ name.split(" ")[1] +"\nRole: " + role +"\nUserEmail: "+ workEmail+"\nUserPhone: " +workPhone + "\nLocation: "+location+"\nTitle: "+title+"\nDepartment/Team: "+ department+ "\n";
+		return "First Name: " + name.split(" ")[0]+ "\nLastName: " + name.split(" ")[1] +"\nRole: " + role +"\nUserEmail: "+ workEmail+"\nUserPhone: " +workPhone + "\nLocation: "+location+"\nTitle: "+title+"\nDepartment/Team: "+ department+ "\n";
 	}
 	public void print() {
 		System.out.print(this.toString());
