@@ -82,63 +82,40 @@
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 							<thead>
 								<tr>
+									<th>Due Date</th>
 									<th>Task Name</th>
 									<th>Summary</th>
 									<th>Total Time</th>
-									<th>Start Stop</th>
-									<th>Due Date</th>
+									<th>Active Time</th>
+									<th>Start/Stop</th>
 								</tr>
 							</thead>
 							<tbody>
 								<!--insert data here-->
-								<tr class="odd gradeX">
-									<td>Trident</td>
-									<td>button id="mixBut", change button look last </td>
-									<td>button trial 1</td>
-									<td class="center"><input type="button" id="mixBut" value="Start" /></td>
-									<td class="center">need js to make functional</td>
-								</tr>
-								<tr class="even gradeC">
-									<td>Trident</td>
-									<td>Dummy data, ignore for now</td>
-									<td>Win 95+</td>
-									<td class="center">5</td>
-									<td class="center">C</td>
-								</tr>
 								<tr class="odd gradeA">
-									<td>Trident</td>
-									<td>Dummy data, ignore for now</td>
-									<td>Win 95+</td>
-									<td class="center">5.5</td>
-									<td class="center">A</td>
-								</tr>
-								<tr class="even gradeA">
-									<td>Trident</td>
-									<td>Dummy data, ignore for now</td>
-									<td>Win 98+</td>
-									<td class="center">6</td>
-									<td class="center">A</td>
-								</tr>
-								<tr class="odd gradeA">
+									<td>4/25-5/15</td>
 									<td>Table1</td>
-									<td>Dummy data, ignore for now</td>
+									<td>total time will be changed to match database</td>
+									<td>00:00.00</td>   <!-- need to write function for total time / get passes in from database-->
 									<td id="timerLabel1">00:00.00</td>
-									<td class="center"><input type="button" value="START" id="start1"></td>
-									<td class="center">A</td>
+									<td><input type="button"  value="START" id="start1"></td>
 								</tr>
 								<tr class="even gradeA">
+									<td>4/25-5/15</td>
 									<td>Table2</td>
-									<td>Dummy data, ignore for now</td>
+									<td>removed reset functions</td>
+									<td>00:00.00</td>
 									<td id="timerLabel2">00:00.00</td>
-									<td class="center"><input type="button" value="START" id="start2"></td>
-									<td class="center">A</td>
+									<td><input type="button" value="START" id="start2"></td>
+
 								</tr>
 								<tr class="gradeA">
+									<td>4/25-5/15</td>
 									<td>Table3</td>
-									<td>Dummy data, ignore for now</td>
+									<td>buttons now working :D</td>
+									<td>00:00.00</td>
 									<td id="timerLabel3">00:00.00</td>
-									<td class="center"><input type="button" value="START" id="start3"></td>
-									<td class="center">A</td>
+									<td><input type="button" value="START" id="start3"></td>
 								</tr>
 							</tbody>
 							</table>
@@ -159,7 +136,7 @@
 		</div>
 	</footer>
 	
-	<script>
+	<!--<script>
 		var mixBut = document.getElementById("mixBut");
 
 		mixBut.addEventListener("click", Start);
@@ -177,7 +154,7 @@
 				mixBut.addEventListener("click", Start);
 				mixBut.value = "Start";
 		}
-</script>
+	</script>-->
 
 	<script>
          
@@ -187,25 +164,25 @@
             document.getElementById("start1").onclick = function(){
                 stopwatch1.start();
             }
-            document.getElementById("reset1").onclick = function(){
+            /*document.getElementById("reset1").onclick = function(){
                 stopwatch1.reset();
-            }
+            }*/
              
             var stopwatch2 = new Timer("timerLabel2", "start2");
             document.getElementById("start2").onclick = function(){
                 stopwatch2.start();
             }
-            document.getElementById("reset2").onclick = function(){
+            /*document.getElementById("reset2").onclick = function(){
                 stopwatch2.reset();
-            }
+            }*/
              
             var stopwatch3 = new Timer("timerLabel3", "start3");
             document.getElementById("start3").onclick = function(){
                 stopwatch3.start();
             }
-            document.getElementById("reset3").onclick = function(){
+           /* document.getElementById("reset3").onclick = function(){
                 stopwatch3.reset();
-            }
+            }*/
              
              
             document.getElementById("moveAllBtn").onclick = function(){
@@ -267,12 +244,12 @@
             }
         }
          
-        Timer.prototype.reset = function() {
+        /*Timer.prototype.reset = function() {
             this.status = 0;
             this.time = 0;
             this.startBtn.value = "START";
             this.timerLabel.innerHTML = "00:00.00";
-        }
+        }*/
          
          
         function getTime(time) {
