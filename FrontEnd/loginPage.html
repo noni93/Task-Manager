@@ -1,72 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
 
-<html lang="en">
-<head>
-<div class="container">
-  <h2>4 Task Management Inc.</h2>
-
-  <div class="btn-group btn-group-justified">
-    <a href="homePage.html" class="btn btn-primary">Home</a>
-    <a href="profile.html" class="btn btn-primary">Profile</a>
-    <a href="loginPage.html" class="btn btn-primary">Login</a>
-  </div>
-  
-</div>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
-        <title>Login Task Manager</title>
-</head>
-    <body>
-
-    <br><br>
-    <div class="container">
-        <form action="#" method="POST" align="center" name = "login_fourm">
-            
-	        <div><label for="username">Username:</label>
-            <input type="text" name="username" placeholder="Enter Username" id="username"><br>
-            </div>
-
-	        <div><label for="password">Password: </label>
-            <input type="password" name="password" placeholder="Enter password" id="password"><br>
-            </div>
-            
-            <div><label for="company_drop">Company:</label>
-                <select name"comany_drop" id="comany_drop" style="height:25px; width:175px" align="center">
-                <option>-- Select One --</option>
-                <option>dummyName</option>
-                <option>name2</option>
-                </select>
-            </div>
-
-		    <div><label for="role_drop" >Position: </label>
-                <select name="role_drop" id="role_drop" style="height:25px; width:175px"  align="center">
-                <option>-- Select One --</option>
-                <option>Admin</option>
-                <option>Manager</option>
-				<option>Employee</option>
-                </select>
-            </div>
-
-            <br>
-            <div><input type="submit" value="Login" style="height:25px; width:250px"/><br> 
-            </div>
-        </form>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="login-bg">
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-12">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="homePage.html">4 Team Management Inc.</a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
 	</div>
-    <br><br>
 
-    <div align="center"><p>Don't have an account?</p>
-        <a href="SignUp.html">Sign Up</a>
-    </div>
-    </body>
-	
-<footer>
-	<div class="container">
-	<hr>
-		<Strong>Devs: Akshar, Jessica, Tina, Matt, Singh</Strong>
+	<div class="page-content container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="login-wrapper">
+			        <div class="box">
+			            <div class="content-wrap">
+			                <h6>Sign In</h6>
+                            <form action="#" method="POST" name="login_fourm" id="login_fourm">
+                                <input class="form-control" type="text" placeholder="Username" name="username" id="username">
+                                <input class="form-control" type="password" placeholder="Password" name="password" id="password">
+
+                                <div class="form-group">
+                                    <!--<label for="company_drop" class="control-label col-md-2">Company</label>-->
+                                    <!--<div class="col-md-10">-->
+                                        <select class="form-control" name="comany_drop" id="company_drop">
+                                            <option value="" disabled selected>---Select a Company---</option>
+                                            <option>Amsterdam</option>
+                                            <option>Atlanta</option>
+                                        </select>
+                                    <!--</div>-->
+                                </div>
+
+                                <div class="form-group">
+                                    <!--<label for="role_drop" class="control-label col-md-2">Position</label>-->
+                                    <!--<div class="col-md-10">-->
+                                        <select class="form-control" name="role_drop" id="role_drop">
+                                            <option value"" disabled selected>---Select a Position---</option>
+                                            <option>Amsterdam</option>
+                                        </select>
+                                    <!--</div>-->
+                                </div>
+
+
+                                <div class="action">
+                                    <a class="btn btn-primary signup" href="userDash.html">Login</a>
+                                </div>
+
+                            </form>                
+                        </div>
+			        </div>
+
+			        <div class="already">
+			            <p>Don't have an account yet?</p>
+			            <a href="signUp.html">Sign Up</a>
+			        </div>
+			    </div>
+			</div>
+		</div>
 	</div>
-</footer>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
 </html>
