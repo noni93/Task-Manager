@@ -76,5 +76,6 @@
 	<classpathentry kind="lib" path="/Users/MK/Documents/TaskManager/S3T4TM2/spring-framework-5.0.5.RELEASE-dist/spring-framework-5.0.5.RELEASE/libs/spring-websocket-5.0.5.RELEASE-javadoc.jar"/>
 	<classpathentry kind="lib" path="/Users/MK/Documents/TaskManager/S3T4TM2/spring-framework-5.0.5.RELEASE-dist/spring-framework-5.0.5.RELEASE/libs/spring-websocket-5.0.5.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/MK/Documents/TaskManager/S3T4TM2/spring-framework-5.0.5.RELEASE-dist/spring-framework-5.0.5.RELEASE/libs/spring-websocket-5.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/MK/Documents/JAVA/sqlite-jdbc-3.21.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
