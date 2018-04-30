@@ -2,4 +2,5 @@
 ---------------------------------------------------
 # contributors: Akshar, Jessica, Tina, Matt, Singh 
 
-* git bash commit test
+* Our CSC 131 group project. 
+Created a Task Manager Web app, that will allow a company to track the time spent on task/tasks. 
