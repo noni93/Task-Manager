@@ -1,3 +1,11 @@
+
+The Dashboard design used in this software was fetched from github. it is an open source and free to use. Since this is our class project  
+and we will not use this software for commercial use, providing correct information of true owner of the dashboard was our duty. 
+this is a copy of Readme from the dashboard's actual owner: 
+
+
+
+
 Bootstrap Admin Theme 3
 =====================
 
