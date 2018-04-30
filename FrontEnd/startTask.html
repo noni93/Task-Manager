@@ -56,10 +56,11 @@
 			  </div>
 			  <div class="col-md-10">
 					<div class="content-box-large">
+					<p style="color:red">* Fill in all the fields.</p>  
 				<form action="#" method="POST" veritcal-align="center" name = "login_fourm" style="border:1px solid" >
 						<br>
 						<div><label for="task_name" class="col-md-2 control-label">Task Name:</label>
-							<input type="text" name="task_name" placeholder="" id="task_name" ><br>
+							<input type="text" name="task_name" placeholder="" id="task_name" required><br>
 						</div>
 						<br><br>
 						<div >
@@ -84,13 +85,13 @@
 						</div>
 						<br>
 						<div><label for="task_describe" class="col-md-2" >Task Description:</label>
-							<textarea name="essay" name="task_describe" id="task_describe" rows="5" cols="50"></textarea><br>
+							<textarea name="essay" name="task_describe" id="task_describe" rows="5" cols="50" required></textarea><br>
 							<!--<input type="text" name="task_describe" placeholder="" id="task_describe" ><br>-->
 						</div>
 						<br><br>
 						
 						<div><label for="task_priority" class="col-md-2 control-label" >Task Priority: </label>
-							<input type="text" name="task_priority" placeholder="Integer between 1-50" id="task_priority" ><br>
+							<input type="text" name="task_priority" placeholder="Integer between 1-50" id="task_priority" required><br>
 						</div>
 						<br><br>
 						
