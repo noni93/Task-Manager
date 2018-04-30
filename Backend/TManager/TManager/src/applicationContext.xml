@@ -18,9 +18,9 @@
  	<bean id="myCoach"
  		class="com.luv2code.springdemo.TrackCoach">	 		
  	</bean>-->
-	<bean id = "Admin" class = "TaskManager.Admin" scope = "prototype"> </bean>
-	<bean id = "Manager" class = "TaskManager.Manager" scope = "prototype"> </bean>
-	<bean id = "TeamUser" class = "TaskManager.TeamUser" scope = "prototype"> </bean>
+	<bean id = "Admin" class = "TManager.Admin" scope = "prototype"> </bean>
+	<bean id = "Manager" class = "TManager.Manager" scope = "prototype"> </bean>
+	<bean id = "TeamUser" class = "TManager.TeamUser" scope = "prototype"> </bean>
 
     <!--
     <bean id="myCoach"
