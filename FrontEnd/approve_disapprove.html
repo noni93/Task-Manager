@@ -58,27 +58,30 @@
 			<div class="col-md-10">
 				<div class="content-box-large">
 					<div class="panel-heading">
-						<dif class="panel-title">Current Users</dif>
+						<Strong><dif class="panel-title">Tasks pending for approval</dif></Strong>
 					</div>
 					<div class="panel-body">
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 							<thead>
 								<tr>
-									<th>User Name</th>
+									<th>Task Name</th>
 									<th>User ID</th>
-									<th>Assigned Task</th>
-									<th>Task Time</th>
-									<th>Remove User</th>
+									<th>Task Description</th>
+									<th>Start Time</th>
+									<th>Stop Time</th>
+									<th>Available Options</th>
 								</tr>
 							</thead>
 							<tbody>
 								<!--insert data here-->
 								<tr class="odd gradeA">
-									<td>User1</td>
-									<td>00001</td>
 									<td>Task1</td>
+									<td>00001</td>
+									<td>First Task</td>
 									<td>00:00.00</td>
-									<td><input type="button" name="remove_user" value="Remove User" id="remove_user"></td>
+									<td>00:00.00</td>
+									<td><input type="button" name="approve_task" value="Approve  " id="approve_task">
+									<input type="button" name="disapprove_task" value="Disapprove" id="disapprove_task"></td>
 								</tr>
 							</tbody>
 							</table>
