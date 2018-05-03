@@ -1,5 +1,9 @@
 package TaskManager;
 
+import javax.persistence.Entity;
+
+//declare class Company as hibernate Entity (available to map to table)
+@Entity
 public class Company {	
 	private String company;
 private String companyId;
