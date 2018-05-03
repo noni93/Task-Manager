@@ -34,6 +34,8 @@ public class CompanyRegistration implements Registration{
 		}else {
 			// Write code to add Company c to the companies table
 			
+			//hibernate code - adding Company c to table
+			//if no table exists (Company), it will create a new one
 			
 			//
 			String table_name = this.creatNewUsersTable();
