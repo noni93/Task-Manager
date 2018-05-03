@@ -31,7 +31,7 @@ public class CompanyRegistrationController {
 			@RequestParam("repassword") String repassword, Model model){
 		String[] data = {firstname + " " +lastname, workphone, email, location, username, password, title, department, repassword};
 	
-		// add user to the new created above
+		// add user to the new company table created above
 		Company comp= new Company(company, companyId, companyphone, address, desc);
 		Registration cregister = new CompanyRegistration(comp);
 		//Add company object to the maually created company tables (name it as companies)

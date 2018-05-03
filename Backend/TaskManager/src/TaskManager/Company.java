@@ -1,12 +1,11 @@
 package TaskManager;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 //declare class Company as hibernate Entity (available to map to table)
-@Entity
+@Entity (name="companies")
 public class Company {
-	// defining created table (from entity) as "company"
+	// defining created table (from entity) as "companies"
 	// company will be our Id (first search param)
 	@Id
 	private String company;

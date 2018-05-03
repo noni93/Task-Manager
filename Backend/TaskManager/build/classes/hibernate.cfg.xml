@@ -35,7 +35,8 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!--  Names the annotated entity class -->
-        <mapping class="org.javabrains.koushik.dto.UserDetails"/>
+        <mapping class="TaskManager.Company"/>
+        <mapping class="TaskManager.User"/>
 
     </session-factory>
 
