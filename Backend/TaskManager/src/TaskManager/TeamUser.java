@@ -1,4 +1,6 @@
 package TaskManager;
+import javax.persistence.*;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -10,5 +12,7 @@ public class TeamUser extends User {
 			String password, String title, String department) {
 		super(name, "teamuser", workPhone, workEmail, location, username, password, title, department);
 	}
+	@Id
+	private String ID = this.getName();
 	
 }

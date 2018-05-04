@@ -35,8 +35,9 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!--  Names the annotated entity class -->
-        <mapping class="TaskManager.Company"/>
         <mapping class="TaskManager.User"/>
+        <mapping class="TaskManager.Company"/>
+        <mapping class="TaskManager.Admin"/>
 
     </session-factory>
 

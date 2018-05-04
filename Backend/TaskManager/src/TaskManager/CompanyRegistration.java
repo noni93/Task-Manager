@@ -32,6 +32,7 @@ public class CompanyRegistration implements Registration {
 	@Override
 	public String register(String... args) {
 		// TODO Auto-generated method stub
+		
 		Object[] results = validatePhoneNumber();
 		boolean result = (Boolean) results[0];
 		String errors = (String) results[1];
@@ -50,10 +51,13 @@ public class CompanyRegistration implements Registration {
 				session.getTransaction().commit();
 				session.close();
 			} catch (Exception e) {
+				System.out.print(e.getMessage());
 				// company already exists
 			}
 			//
-			// now add the admin portion into table
+			// now add the admin portion into table with creatNewUsersTable();
+			//not implementing next line (all users will go into one table)
+			//SELECT to grab
 			String table_name = this.creatNewUsersTable();
 			return table_name;
 		}
@@ -62,8 +66,9 @@ public class CompanyRegistration implements Registration {
 	private String creatNewUsersTable() {
 		String table_name = c.getCompany() + "users";
 		// Create Table code here
-
+		//not implementing
 		// having hibernate do this for me
+		// all users will go in one table, SELECT to grab company/user type/etc instead
 		return table_name;
 	}
 

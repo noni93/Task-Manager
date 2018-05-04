@@ -3,7 +3,7 @@ package TaskManager;
 import javax.persistence.*;
 
 //defining user as entity (able to be mapped to hibernate table)
-@Entity
+@Entity (name="userdatabase")
 public class User {
 	//define name as Id (searchable first param)
 	@Id
