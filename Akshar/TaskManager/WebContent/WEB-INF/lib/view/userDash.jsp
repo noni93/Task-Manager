@@ -1,0 +1,312 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Team Dashboard 4 Task Management Inc.</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		
+		<
+		<!-- styles -->
+	
+		<!--link href="./bootstrap1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"-->
+			<spring:url value = "/resources/bootstrap/css/bootstrap.min.css" var = "main" />
+		<!-- styles -->
+		
+		<spring:url value = "/resources/css/styles.css" var = "styles" />
+		
+ 	   
+ 	   <spring:url value = "/resources/css/bootstrap-datetimepicker.min.css" var = "date" />
+ 	   	
+	 	<spring:url value = "/resources/jquery/jquery-1.8.3.min.js" var = "jquery" />
+	 	<spring:url value = "/resources/bootstrap1.1/js/bootstrap.min.js" var = "bootstrap" />
+	 	<spring:url value = "/resources/js/bootstrap-datetimepicker.js" var = "bootstrap1" />
+	 	<spring:url value = "/resources/js/locales/bootstrap-datetimepicker.fr.js" var = "bootstrap2" />
+	 	<spring:url value = "/resources/Bootstrap-Admin-Theme-prototype/vendors/datatables/dataTables.bootstrap.css" var = "admin" />
+		<spring:url value = "/resources/Bootstrap-Admin-Theme-prototype/vendors/datatables/js/jquery.dataTables.min.js" var = "admin1" />
+		<spring:url value = "/resources/js/custom.js" var = "custom" />
+		<spring:url value = "/resources/Bootstrap-Admin-Theme-prototype/vendors/datatables/dataTables.bootstrap.js" var = "admin2" />
+ 	   	<spring:url value = "/resources/js/tables.js" var = "table" />
+ 	   	<spring:url value = "/resources/js/DashJs/strtStpBttn.js" var = "dash" />
+ 	   <link href="${main}"rel="stylesheet" />
+ 	   <link href="${styles}"rel="stylesheet" />
+ 	   <link href="${date}" rel="stylesheet" media="screen" />
+	
+	
+	<link href="${admin}" rel="stylesheet" media="screen">
+		<script type="text/javascript" src="${jquery}" charset="UTF-8"></script>
+		<script type="text/javascript" src="${bootstrap}"></script>
+		<script type="text/javascript" src="${bootstrap1}" charset="UTF-8"></script>
+		<script type="text/javascript" src="${bootstrap2}" charset="UTF-8"></script>
+ 	   <script src="${admin1}"></script>
+ 	   <script src="${admin2}"></script>
+ 	   <script src="${custom}"></script>
+ 	   <script src="${table}"></script>
+ 	   <script src="${dash}"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- jQuery UI -->
+	<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!--script src="bootstrap/js/bootstrap.min.js"></script-->
+
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	</head>
+	 
+	<body>
+		<div class="header">
+			 <div class="container">
+				<div class="row">
+				   <div class="col-md-5">
+					  <!-- Logo -->
+					  <div class="logo">
+						 <h1><a href="../userdashboard/showUDash">Team Dashboard</a></h1>
+					  </div>
+				   </div>
+				   <div class="col-md-2">
+					  <div class="navbar navbar-inverse" role="banner">
+						  <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+							<ul class="nav navbar-nav">
+							  <li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+								<ul class="dropdown-menu animated fadeInUp">
+								  <li><a href="profile.html">Profile</a></li>
+								  <li><a href="#">Logout</a></li>
+								</ul>
+							  </li>
+							</ul>
+						  </nav>
+					  </div>
+				   </div>
+				</div>
+			 </div>
+		</div>  
+	 
+		<div class="page-content" vertical-align="left">
+			<div class="row">
+			  <div class="col-md-2">
+				<div class="sidebar content-box" style="display: block;">
+					<ul class="nav">
+						<!-- Main menu -->
+						<li class="current"><a href ="../userdashboard/showUDash"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+						<li><a href="../Task/showStartTask"><i class="glyphicon glyphicon-calendar"></i> Propose Task</a></li>
+						<li><a href="../Task/showUpdateTask"><i class="glyphicon glyphicon-cog"></i>Task Config/Edit</a></li>
+						<li><a href="../userdashboard/showUDash"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
+						</li>
+					</ul>
+				 </div>
+				</div>
+			<div class="col-md-10">
+				<div class="content-box-large">
+					<div class="panel-heading">
+						<dif class="panel-title">Active Tasks</dif>
+					</div>
+					<div class="panel-body">
+						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+							<thead>
+								<tr>
+									<th>Due Date</th>
+									<th>Task Name</th>
+									<th>Summary</th>
+									<th>Total Time</th>
+									<th>Active Time</th>
+									<th>Start/Stop</th>
+									<th>Edit Task</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--insert data here-->
+								<tr class="odd gradeA">
+									<td>4/25-5/15</td>
+									<td>Table1</td>
+									<td>total time will be changed to match database</td>
+									<td>00:00.00</td>   <!-- need to write function for total time / get passes in from database-->
+									<td id="timerLabel1">00:00.00</td>
+									<td><input type="button"  value="START" id="start1"></td>
+									<td><a href="taskConfig.html"><input type="button"  value="Edit Task" name="edit_Task"></td>
+								</tr>
+								<tr class="even gradeA">
+									<td>4/25-5/15</td>
+									<td>Table2</td>
+									<td>removed reset functions</td>
+									<td>00:00.00</td>
+									<td id="timerLabel2">00:00.00</td>
+									<td><input type="button" value="START" id="start2"></td>
+
+								</tr>
+								<tr class="gradeA">
+									<td>4/25-5/15</td>
+									<td>Table3</td>
+									<td>buttons now working :D</td>
+									<td>00:00.00</td>
+									<td id="timerLabel3">00:00.00</td>
+									<td><input type="button" value="START" id="start3"></td>
+								</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+    </body>
+	
+	<footer>
+		<div class="container">
+		<hr>
+			<Strong>Devs: Akshar, Jessica, Tina, Matt, Singh</Strong>
+		</div>
+	</footer>
+	
+	<!--<script>
+		var mixBut = document.getElementById("mixBut");
+
+		mixBut.addEventListener("click", Start);
+		
+		function Start(){
+				console.log("Started");
+				mixBut.removeEventListener("click", Start);
+				mixBut.addEventListener("click", Stop);
+				mixBut.value = "Stop";
+		}
+		
+		function Stop(){
+				console.log("Stopped");
+				mixBut.removeEventListener("click", Stop);
+				mixBut.addEventListener("click", Start);
+				mixBut.value = "Start";
+		}
+	</script>-->
+
+	<script>
+         
+        function init() {
+             
+            var stopwatch1 = new Timer("timerLabel1", "start1");
+            document.getElementById("start1").onclick = function(){
+                stopwatch1.start();
+            }
+            /*document.getElementById("reset1").onclick = function(){
+                stopwatch1.reset();
+            }*/
+             
+            var stopwatch2 = new Timer("timerLabel2", "start2");
+            document.getElementById("start2").onclick = function(){
+                stopwatch2.start();
+            }
+            /*document.getElementById("reset2").onclick = function(){
+                stopwatch2.reset();
+            }*/
+             
+            var stopwatch3 = new Timer("timerLabel3", "start3");
+            document.getElementById("start3").onclick = function(){
+                stopwatch3.start();
+            }
+           /* document.getElementById("reset3").onclick = function(){
+                stopwatch3.reset();
+            }*/
+             
+             
+            document.getElementById("moveAllBtn").onclick = function(){
+                 
+                if (document.getElementById("moveAllBtn").value == 'START') {
+                    stopwatch1.status = 0;
+                    stopwatch2.status = 0;
+                    stopwatch3.status = 0;
+                     
+                } else {
+                    stopwatch1.status = 1;
+                    stopwatch2.status = 1;
+                    stopwatch3.status = 1;
+                }
+                 
+                stopwatch1.start();
+                stopwatch2.start();
+                stopwatch3.start();
+                 
+            }       
+             
+        }
+         
+         
+        function Timer(timerLabelId, startBtnId) {
+            this.status = 0;
+            this.time = 0;
+            this.timerLabel = document.getElementById(timerLabelId);
+            this.startBtn = document.getElementById(startBtnId);
+        }
+         
+        Timer.prototype.start = function() {
+             
+            if (this.status == 0) {
+                this.status = 1;
+                this.startBtn.value = "STOP";
+                this.count();
+                 
+            } else {
+                this.status = 0;
+                this.startBtn.value = "START";
+  
+            }           
+        }
+         
+        Timer.prototype.count = function() {
+             
+            if (this.status == 1) {
+                var that = this;
+                setTimeout(function(){
+                    that.time++;
+                    that.timerLabel.innerHTML = getTime(that.time);
+                    that.count();
+                }, 10);
+                document.getElementById("moveAllBtn").value = 'STOP';
+                 
+            } else {
+                document.getElementById("moveAllBtn").value = 'START';
+            }
+        }
+         
+        /*Timer.prototype.reset = function() {
+            this.status = 0;
+            this.time = 0;
+            this.startBtn.value = "START";
+            this.timerLabel.innerHTML = "00:00.00";
+        }*/
+         
+         
+        function getTime(time) {
+             
+            var min = Math.floor(time/(100/60));
+            var sec = Math.floor(time/100);
+            var mSec = time%100;
+             
+            if (min < 10) {
+                min = "0" + min;
+            }
+            if (sec >= 60) {
+                sec = sec % 60;
+            }
+            if (sec < 10) {
+                sec = "0" + sec;
+            }
+             
+            return min + ":" + sec + "." + mSec;
+             
+        }
+         
+        init();
+  
+    </script>
+</html>
