@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 <!--This is the header portion of the webpage it will be placed on all the pages we make-->
-<
   <title>Manager Registration</title>
   
   <meta charset="utf-8">
@@ -69,8 +68,9 @@
   </div>
 
   <div align="center" style = "display:inline-block;text-align:center;"><button type="submit" class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Submit</button></div>
-	<div align="center" style = "display:inline-block;text-align:center;"><a href = "../Admin/showAdminDash"><button  class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Cancel</button></a></div>
+	
 </form>
+<div align="center" style = "display:inline-block;text-align:center;"><a href = "../Admin/showAdminDash"><button  class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Cancel</button></a></div>
 </div>
 
 <footer>
