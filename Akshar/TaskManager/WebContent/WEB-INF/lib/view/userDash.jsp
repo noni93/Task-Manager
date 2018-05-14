@@ -1,4 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page import="java.util.*" %>
+<%@ page import="TaskManager.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -114,43 +116,51 @@
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 							<thead>
 								<tr>
-									<th>Due Date</th>
+									<th> Task Id</th>
+									<th> Task Priority </th>
 									<th>Task Name</th>
-									<th>Summary</th>
-									<th>Total Time</th>
-									<th>Active Time</th>
-									<th>Start/Stop</th>
-									<th>Edit Task</th>
+									<th>Task Start Time </th>
+									<th>Task Scheduled StopTime</th>
+									<th> Task Description </th>
+									<th> StopTime</th>
+									<th> Delete</th>
+									<th> Edit</th>
 								</tr>
 							</thead>
 							<tbody>
 								<!--insert data here-->
-								<tr class="odd gradeA">
-									<td>4/25-5/15</td>
-									<td>Table1</td>
-									<td>total time will be changed to match database</td>
-									<td>00:00.00</td>   <!-- need to write function for total time / get passes in from database-->
-									<td id="timerLabel1">00:00.00</td>
-									<td><input type="button"  value="START" id="start1"></td>
-									<td><a href="taskConfig.html"><input type="button"  value="Edit Task" name="edit_Task"></td>
-								</tr>
-								<tr class="even gradeA">
-									<td>4/25-5/15</td>
-									<td>Table2</td>
-									<td>removed reset functions</td>
-									<td>00:00.00</td>
-									<td id="timerLabel2">00:00.00</td>
-									<td><input type="button" value="START" id="start2"></td>
-
-								</tr>
-								<tr class="gradeA">
-									<td>4/25-5/15</td>
-									<td>Table3</td>
-									<td>buttons now working :D</td>
-									<td>00:00.00</td>
-									<td id="timerLabel3">00:00.00</td>
-									<td><input type="button" value="START" id="start3"></td>
-								</tr>
+								<% 
+									LinkedList<UserManageTask.TaskData> tasks = (LinkedList<UserManageTask.TaskData>)session.getAttribute("Tasks");
+									
+									
+									for(UserManageTask.TaskData task: tasks){
+										out.println("<tr class = \"odd gradeA\">");
+										
+										String id = task.getId();
+										String p = task.getTask().getPriorty() + "";
+										String name = task.getTask().getTask_name() + "";
+										String st = task.getTask().getStartTime();
+										String sst = task.getTask().getScheduledStop();
+										String desc = task.getTask().getDesc();
+										out.println("<td>" + id + "</td>");
+										out.println("<td>" + p + "</td>");
+										out.println("<td>" + name + "</td>");
+										out.println("<td>" + st + "</td>");
+										out.println("<td>" + sst+ "</td>");
+										out.println("<td>" + desc + "</td>");
+										out.println("<td><form action = \"../Login/showLogin\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">StopTask</button></form></td>");
+										out.println("<td><form action = \"../userdashboard/deleteTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Delete</button></form></td>");
+										out.println("<td><form action = \"../Task/updateTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Edit</button></form></td>");
+										
+										out.println("</tr>");
+										
+										
+									}
+									
+									
+								%>
+								
+				
 							</tbody>
 							</table>
 						</div>
@@ -302,7 +312,7 @@
                 sec = "0" + sec;
             }
              
-            return min + ":" + sec + "." + mSec;
+            return (min + ":" + sec + "." + mSec);
              
         }
          
