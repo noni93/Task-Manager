@@ -35,7 +35,7 @@
 				   <div class="col-md-5">
 					  <!-- Logo -->
 					  <div class="logo">
-						 <h1><a href="userDash.html">Team Dashboard</a></h1>
+						 <h1><a href="../userdashboard/showUDash">Team Dashboard</a></h1>
 					  </div>
 				   </div>
 				   <div class="col-md-2">
@@ -63,10 +63,10 @@
 				<div class="sidebar content-box" style="display: block;">
 					<ul class="nav">
 						<!-- Main menu -->
-						<li ><a href ="userDash.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
-						<li><a href="startTask.html"><i class="glyphicon glyphicon-calendar"></i>Propose Task</a></li>
-						<li class="current"><a href="taskConfig.html"><i class="glyphicon glyphicon-cog"></i> Task Config/Edit</a></li>
-						<li><a href="userDash.html"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
+						<li ><a href ="../userdashboard/showUDash"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+						<li><a href="../Task/showStartTask"><i class="glyphicon glyphicon-calendar"></i>Propose Task</a></li>
+						<li class="current"><a href="../userdashboard/updateTask"><i class="glyphicon glyphicon-cog"></i> Task Config/Edit</a></li>
+						<li><a href="../userdashboard/showUDash"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
 						</li>
 					</ul>
 				 </div>
