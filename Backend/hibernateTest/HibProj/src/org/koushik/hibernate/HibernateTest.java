@@ -19,26 +19,26 @@ try{
 		session.save(user);
 		session.getTransaction().commit();
         session.close();
-        user = null;
-        Session session2 = sessionFactory.openSession();
-        session2.beginTransaction();
-        //use the session object to get the data
-        user = (UserDetails) session2.get(UserDetails.class, 1); //first arg is the class
-        //second arg is the KEYS value. In this case, we set the KEY as userId.
-        //(UserDetails) is a cast to newUser
-        //we are going to grab (search) for 1 in this case
+//        user = null;
+//        Session session2 = sessionFactory.openSession();
+//        session2.beginTransaction();
+//        //use the session object to get the data
+//        user = (UserDetails) session2.get(UserDetails.class, 1); //first arg is the class
+//        //second arg is the KEYS value. In this case, we set the KEY as userId.
+//        //(UserDetails) is a cast to newUser
+//        //we are going to grab (search) for 1 in this case
         System.out.println("Added " + user.getUserName() + " to database");
 }catch(Exception e) {
 	System.out.println("User exists");
-    user = null;
-    Session session2 = sessionFactory.openSession();
-    session2.beginTransaction();
-    //use the session object to get the data
-    user = (UserDetails) session2.get(UserDetails.class, 3); //first arg is the class
-    //second arg is the KEYS value. In this case, we set the KEY as userId.
-    //(UserDetails) is a cast to newUser
-    //we are going to grab (search) for 3 in this case
-    System.out.println("User Name: " + user.getUserName());
+//    user = null;
+//    Session session2 = sessionFactory.openSession();
+//    session2.beginTransaction();
+//    //use the session object to get the data
+//    user = (UserDetails) session2.get(UserDetails.class, 3); //first arg is the class
+//    //second arg is the KEYS value. In this case, we set the KEY as userId.
+//    //(UserDetails) is a cast to newUser
+//    //we are going to grab (search) for 3 in this case
+//    System.out.println("User Name: " + user.getUserName());
 }
         
         
