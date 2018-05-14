@@ -29,13 +29,13 @@ public class CompanyRegistrationController {
 			@RequestParam("location") String location,
 			@RequestParam("password") String password,
 			@RequestParam("repassword") String repassword, Model model){
-		String[] data = {firstname + " " +lastname, workphone, email, location, username, password, title, department, repassword};
-		
+		String[] data = {firstname + " " +lastname, workphone, email, location, username, password, title, department, repassword,company};
+	
 		// add user to the new created above
 		Company comp= new Company(company, companyId, companyphone, address, desc);
 		Registration cregister = new CompanyRegistration(comp);
 		//Add company object to the maually created company tables (name it as companies)
-		//(NOT IMPLEMENTING)****Create a new table in database programmatically Create Table query(name is companyName + "users") (NOT IMPLEMENTING)
+		//Create a new table in database programmatically Create Table query(name is companyName + "users")
 		// the code for above two comments go into cregister.register) method
 		//see CompantRegistrationClass and register() method in it and put the code there
 		String cresult = cregister.register();

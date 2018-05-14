@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 public class Manager extends User {
 
 	public Manager(String name, String workPhone, String workEmail, String location, String username,
-			String password, String title, String department) {
-		super(name, "Manager", workPhone, workEmail, location, username, password, title, department);
+			String title, String department, String company) {
+		super(name, "Manager", workPhone, workEmail, location, username,  title, department, company);
 	}
 	
 }
