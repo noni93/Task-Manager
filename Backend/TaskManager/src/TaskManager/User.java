@@ -1,30 +1,24 @@
 package TaskManager;
 
-import javax.persistence.*;
-
-//defining user as entity (able to be mapped to hibernate table)
-@Entity (name="userdatabase")
 public class User {
-	//define name as Id (searchable first param)
-	@Id
 	private String name;
 	private String role;
 	private String workPhone;
 	private String workEmail;
 	private String location;
 	private String username;
-	private String password;
+	private String company;
 	private String title;
 	private String department;
 	public User(String name, String role, String workPhone, String workEmail, String location, String username,
-			String password, String title, String department) {
+			 String title, String department, String company) {
 		this.name = name;
 		this.role = role;
 		this.workPhone = workPhone;
 		this.workEmail = workEmail;
 		this.location = location;
 		this.username = username;
-		this.password = password;
+		this.company = company;
 		this.title = title;
 		this.department = department;
 	}
@@ -71,5 +65,14 @@ public class User {
 	}
 	public void print() {
 		System.out.print(this.toString());
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String c) {
+		this.company = c;
+	}
+	public String getRole() {
+		return role;
 	}
 }

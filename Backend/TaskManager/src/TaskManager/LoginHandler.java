@@ -18,8 +18,19 @@ public class LoginHandler {
 			//After querying
 			// Create user object with all columns about user but assign the password to the variable below
 			String password_db = "";
-			// set user to =  new User(all data from database);
+			
+			//set role_db to role of feteched user from database
+			String role_db = "";
 			User user =  null;
+			if(role_db.equals("Admim")) {
+				// user = new Admin(data)
+			}else if(role_db.equals("Manager")) {
+				//user = new Manager();
+				
+			}else if(role_db.equals("teamuser")) {
+				// user =  new TeamUser();
+			}
+			
 			
 			//set it to true if you found given user with given username and company in database
 			boolean is_it_in_db = false;
