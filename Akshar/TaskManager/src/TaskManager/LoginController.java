@@ -37,8 +37,13 @@ public class LoginController {
 			if(role.equals("Admin")) {
 				return "adminDash";
 			}else if(role.equals("Manager")) {
-				return "managerDash";
+				UserManageTask umt = new UserManageTask((User)session.getAttribute("User"));
+				umt.getAllTasks(session);
+				
+				return "userDash";
 			}else if(role.equals("teamuser")) {
+				UserManageTask umt = new UserManageTask((User)session.getAttribute("User"));
+				umt.getAllTasks(session);
 				return "userDash";
 			}else {
 				return "loginPage";
@@ -50,4 +55,5 @@ public class LoginController {
 		
 		
 	}
+	
 }
