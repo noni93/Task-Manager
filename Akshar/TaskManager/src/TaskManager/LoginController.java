@@ -35,6 +35,8 @@ public class LoginController {
 			session.setAttribute("User", user);
 			String role = user.getRole();
 			if(role.equals("Admin")) {
+				AdminManageUser amu = new  AdminManageUser((User)session.getAttribute("User"));
+				amu.getAllUsers(session);
 				return "adminDash";
 			}else if(role.equals("Manager")) {
 				UserManageTask umt = new UserManageTask((User)session.getAttribute("User"));
