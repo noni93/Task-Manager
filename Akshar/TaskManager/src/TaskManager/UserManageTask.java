@@ -128,7 +128,7 @@ public class UserManageTask {
 	public boolean startTask(String id) {
 		Timestamp ts = new Timestamp(Calendar.getInstance().getTimeInMillis());
 		String starttime = ts.toString();
-				//update tasktable set starttime = starttime where id = id
+		//update tasktable set starttime = starttime where id = id
 		boolean updated = false;
 		//make it true if updated successfully
 		return updated;
@@ -137,6 +137,8 @@ public class UserManageTask {
 		Timestamp ts = new Timestamp(Calendar.getInstance().getTimeInMillis());
 		String stoptime = ts.toString();
 		//update tasktable set stoptime = stoptime where id = id;
+		/*2018-05-15 07:43:03.096*/
+		
 		boolean updated = false;
 		//make it true if updated successfully
 		return updated;
