@@ -13,6 +13,7 @@ public class HomeController {
 	public String navigateHome() {
 		 return "homePage";
 	}
+	 
 
 
 }
