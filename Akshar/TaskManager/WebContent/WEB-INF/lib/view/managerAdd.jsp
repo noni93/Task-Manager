@@ -22,7 +22,7 @@
   <p style="color:red">* Fill in all the fields.</p>    
 </div>
 <div><p style = "color:red";>${MRegError}</div>
-<form action = "../ManagerAdd/processMAD" method = "POST">
+<form action = "../ManagerAdd/processMAD" method = "POST" style = "display:inline">
   <div class="form-group">
     <label for="firstname">First Name:</label>
     <input type="text" class="form-control" id="firstname" name = "firstname" required>
@@ -67,10 +67,10 @@
     <input type="password" name = "repassword" class="form-control" id="repassword" required>
   </div>
 
-  <div align="center" style = "display:inline-block;text-align:center;"><button type="submit" class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Submit</button></div>
+  <div align="center"><button type="submit" class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Submit</button></div>
 	
 </form>
-<div align="center" style = "display:inline-block;text-align:center;"><a href = "../Admin/showAdminDash"><button  class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Cancel</button></a></div>
+<div align="center"  style = "margin-top:5px"><a href = "../Admin/showAdminDash"><button  class="btn btn-default" style="color: white;background-color:#337ab7; font-size:15px">Cancel</button></a></div>
 </div>
 
 <footer>
