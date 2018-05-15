@@ -82,7 +82,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 								<ul class="dropdown-menu animated fadeInUp">
 								  <li><a href="profile.html">Profile</a></li>
-								  <li><a href="#">Logout</a></li>
+								  <li><a href="../userdashboard/logout">Logout</a></li>
 								</ul>
 							  </li>
 							</ul>
@@ -101,7 +101,13 @@
 						<!-- Main menu -->
 						<li class="current"><a href ="../userdashboard/showUDash"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
 						<li><a href="../Task/showStartTask"><i class="glyphicon glyphicon-calendar"></i> Propose Task</a></li>
-						<li><a href="../Task/showUpdateTask"><i class="glyphicon glyphicon-cog"></i>Task Config/Edit</a></li>
+						<% 
+							User user = (User)session.getAttribute("User");
+							String role = user.getRole();
+							if(role.equals("Manager")){
+								out.println("<li><a href=\"../TeamuserAdd/showTUAdd\"><i class=\"glyphicon glyphicon-calendar\"></i>Add TeamUser</a></li>");
+							}
+						%>
 						<li><a href="../userdashboard/showUDash"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
 						</li>
 					</ul>
@@ -113,6 +119,7 @@
 						<dif class="panel-title">Active Tasks</dif>
 					</div>
 					<div class="panel-body">
+						<p style = "color:red;">${TaskStatusError}</p>
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 							<thead>
 								<tr>
@@ -120,8 +127,15 @@
 									<th> Task Priority </th>
 									<th>Task Name</th>
 									<th>Task Start Time </th>
-									<th>Task Scheduled StopTime</th>
+									<th>Task Stop Time</th>
 									<th> Task Description </th>
+									<%
+										if(role.equals("Manager")){
+											out.println("<th>ApproveTask</th>");
+											out.println("<th>DisApproveTask</th>");
+										}
+									%>
+									<th>StartTime</th>
 									<th> StopTime</th>
 									<th> Delete</th>
 									<th> Edit</th>
@@ -131,8 +145,8 @@
 								<!--insert data here-->
 								<% 
 									LinkedList<UserManageTask.TaskData> tasks = (LinkedList<UserManageTask.TaskData>)session.getAttribute("Tasks");
-									
-									
+									User user1 =  (User)session.getAttribute("User");
+									String role1 = user1.getRole();
 									for(UserManageTask.TaskData task: tasks){
 										out.println("<tr class = \"odd gradeA\">");
 										
@@ -140,7 +154,9 @@
 										String p = task.getTask().getPriorty() + "";
 										String name = task.getTask().getTask_name() + "";
 										String st = task.getTask().getStartTime();
-										String sst = task.getTask().getScheduledStop();
+										if(st.length() == 0) st = "None";
+										String sst = task.getTask().getStopTime();
+										if(sst.length() == 0) sst = "None";
 										String desc = task.getTask().getDesc();
 										out.println("<td>" + id + "</td>");
 										out.println("<td>" + p + "</td>");
@@ -148,9 +164,15 @@
 										out.println("<td>" + st + "</td>");
 										out.println("<td>" + sst+ "</td>");
 										out.println("<td>" + desc + "</td>");
-										out.println("<td><form action = \"../Login/showLogin\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">StopTask</button></form></td>");
+										if(role1.equals("Manager")){
+											out.println("<td><form action = \"../userdashboard/approveTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Approve</button></form></td>");
+											out.println("<td><form action = \"../userdashboard/disapproveTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">DisApprove</button></form></td>");
+										}
+										
+										out.println("<td><form action = \"../userdashboard/startTime\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">StartTask</button></form></td>");
+										out.println("<td><form action = \"../userdashboard/stopTime\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">StopTask</button></form></td>");
 										out.println("<td><form action = \"../userdashboard/deleteTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Delete</button></form></td>");
-										out.println("<td><form action = \"../Task/updateTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Edit</button></form></td>");
+										out.println("<td><form action = \"../userdashboard/editTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Edit</button></form></td>");
 										
 										out.println("</tr>");
 										
@@ -278,7 +300,7 @@
                 var that = this;
                 setTimeout(function(){
                     that.time++;
-                    that.timerLabel.innerHTML = getTime(that.time);
+                    that.timerLabel.innerHTML = getTime(this.time);
                     that.count();
                 }, 10);
                 document.getElementById("moveAllBtn").value = 'STOP';
@@ -298,7 +320,8 @@
          
         function getTime(time) {
              
-            var min = Math.floor(time/(100/60));
+        	var t  = 100/60;
+            var min = Math.floor(time/t);
             var sec = Math.floor(time/100);
             var mSec = time%100;
              
