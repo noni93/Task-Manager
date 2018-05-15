@@ -22,7 +22,7 @@
   <p style="color:red">* Fill in all the fields.</p>    
 </div>
 <div><p style = "color:red";>${TURegError}</div>
-<form action = "../TeamuserAdd/processTAD" method = "POST">
+<form action = "../TeamuserAdd/processTAD" method = "POST" style = "display:inline">
   <div class="form-group">
     <label for="firstname">First Name:</label>
     <input type="text" class="form-control" id="firstname" name = "firstname" required>
@@ -70,7 +70,7 @@
   <div align="center" ><button type="submit" class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Submit</button></div>
 	
 </form>
-<div align="center" ><a href = "../userdashboard/showUDash"><button  class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Cancel</button></a></div>
+<div align="center" style = "margin-top: 5px"><a href = "../userdashboard/showUDash"><button  class="btn btn-default" style="color: white; background-color:#337ab7; font-size:15px">Cancel</button></a></div>
 </div>
 
 <footer>
