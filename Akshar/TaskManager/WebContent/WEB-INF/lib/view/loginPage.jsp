@@ -23,7 +23,7 @@
     </head>
     <body>
 
-	<br><br><div class="container">
+	<br><br><div class="container" align = "center">
         <form action="../Login/processLogin" method="POST" align="center" name = "login_fourm">
 	    <div><label for="username">Username:</label>
              <input type="text" name="username" placeholder="Enter Username" id="username"><br>
