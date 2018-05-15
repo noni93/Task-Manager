@@ -2,9 +2,9 @@ package TaskManager;
 
 public class TaskRegistration implements Registration {
 	private Task task;
-	public TaskRegistration(String startTime, String scheduledStop, int priorty, String desc, String team_assoc, String task_name,
+	public TaskRegistration( int priorty, String desc, String team_assoc, String task_name,
 			String task_company, User task_user) {
-	   task = new Task(startTime, scheduledStop, priorty, desc, team_assoc, task_name, task_company, task_user);
+	   task = new Task(priorty, desc, team_assoc, task_name, task_company, task_user);
 	   
 	}
 	@Override
