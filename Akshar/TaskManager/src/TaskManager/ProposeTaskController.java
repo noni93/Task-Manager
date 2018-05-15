@@ -16,9 +16,7 @@ public class ProposeTaskController {
 		return "startTask";
 	}
 	@RequestMapping("/proposeTask")
-	public String proposeTask(@RequestParam("task_name") String tname
-			, @RequestParam("starttime") String starttime,
-			@RequestParam("stoptime") String stoptime,
+	public String proposeTask(@RequestParam("task_name") String tname,
 			@RequestParam("task_describe") String tdesc,
 			@RequestParam("task_priority") String tprior
 			, HttpSession session) {
@@ -26,10 +24,22 @@ public class ProposeTaskController {
 	    String team_assoc = "";
 	    String task_company = "";
 	   
-		Registration tg = new TaskRegistration(starttime, stoptime, Integer.parseInt(tprior), tdesc,user.getDepartment(),tname, user.getCompany(), user);
+		Registration tg = new TaskRegistration(Integer.parseInt(tprior), tdesc,user.getDepartment(),tname, user.getCompany(), user);
 		tg.register();
 		tg.clean();
 		return "startTask";
+	}
+	@RequestMapping("/updateTask")
+	public String updateTask(@RequestParam("task_name") String tname,
+			@RequestParam("task_describe") String tdesc,
+			@RequestParam("task_priority") String tprior
+			, @RequestParam("id") String id,HttpSession session) {
+		//write query here to update the task with id
+		//Update  tasktable set task_name = tname,  taskdescribe = tdesc, task_priority = Integer.parseInt(tprior) where id = id;
+		
+		 UserManageTask umt = new UserManageTask((User)session.getAttribute("User"));
+		 umt.getAllTasks(session);
+		return "userDash";
 	}
 	
 }
