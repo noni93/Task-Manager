@@ -71,4 +71,8 @@ public class UserDashboardController {
 		 umt.getAllTasks(session);
 		 return "userDash";
 	}
+	@RequestMapping("/profile")
+	public String profile() {
+		return "userprofile";
+	}
 }
