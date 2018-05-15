@@ -2,7 +2,7 @@ package TaskManager;
 
 public class Task {
 	private String startTime;
-	private String scheduledStop;
+	
 	private int priorty;
 	private String stoptime;
 	private String desc;
@@ -10,23 +10,31 @@ public class Task {
 	private String task_name;
 	private String task_company;
 	private User task_user;
+	private boolean approved;
 	@Override
 	public String toString() {
-		return "Task [startTime=" + startTime + ", scheduledStop=" + scheduledStop + ", priorty=" + priorty
+		return "Task [startTime=" + startTime + ", priorty=" + priorty
 				+ ", stoptime=" + stoptime + ", desc=" + desc + ", team_assoc=" + team_assoc + ", task_name="
 				+ task_name + ", task_company=" + task_company + ", task_user=" + task_user + "]";
 	}
-	public Task(String startTime, String scheduledStop, int priorty, String desc, String team_assoc, String task_name,
+	public Task( int priorty, String desc, String team_assoc, String task_name,
 			String task_company, User task_user) {
-		this.startTime = startTime;
-		this.scheduledStop = scheduledStop;
+		this.startTime = "";
+		
 		this.priorty = priorty;
 		this.desc = desc;
 		this.team_assoc = team_assoc;
 		this.task_name = task_name;
 		this.task_company = task_company;
 		this.task_user = task_user;
-		stoptime = null;
+		stoptime = "";
+		this.approved = false;
+	}
+	public boolean getStatus() {
+		return approved;
+	}
+	public void setStatus(boolean status) {
+		this.approved = status;
 	}
 	public String getStopTime() {
 		return stoptime;
@@ -40,12 +48,7 @@ public class Task {
 	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public String getScheduledStop() {
-		return scheduledStop;
-	}
-	public void setScheduledStop(String scheduledStop) {
-		this.scheduledStop = scheduledStop;
-	}
+
 	public int getPriorty() {
 		return priorty;
 	}
