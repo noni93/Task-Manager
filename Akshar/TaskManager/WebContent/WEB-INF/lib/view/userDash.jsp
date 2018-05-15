@@ -1,14 +1,24 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page import="java.util.*" %>
+<%@ page import ="java.sql.Timestamp" %>
 <%@ page import="TaskManager.*" %>
+<%@ page import = "java.time.*" %> 
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Team Dashboard 4 Task Management Inc.</title>
+		
+		<%
+					  	User user3 = (User)session.getAttribute("User");
+					  	if(user3.getRole().equals("Manager")){
+					  		out.println(" <title>Manager Dashboard 4 Task Management Inc.</title>");
+					  	}else {
+					  		out.println(" <title>Team User Dashboard 4 Task Management Inc.</title>");
+					  	}
+		 %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
 		
-		<
+		
 		<!-- styles -->
 	
 		<!--link href="./bootstrap1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"-->
@@ -71,7 +81,15 @@
 				   <div class="col-md-5">
 					  <!-- Logo -->
 					  <div class="logo">
-						 <h1><a href="../userdashboard/showUDash">Team Dashboard</a></h1>
+					  <%
+					  	User user2 = (User)session.getAttribute("User");
+					  	if(user2.getRole().equals("Manager")){
+					  		out.println(" <h1><a href=\"../userdashboard/showUDash\">Manager Dashboard</a></h1>");
+					  	}else {
+					  		out.println(" <h1><a href=\"../userdashboard/showUDash\">Team User Dashboard</a></h1>");
+					  	}
+					  %>
+						
 					  </div>
 				   </div>
 				   <div class="col-md-2">
@@ -81,7 +99,7 @@
 							  <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 								<ul class="dropdown-menu animated fadeInUp">
-								  <li><a href="profile.html">Profile</a></li>
+								  <li><a href="../userdashboard/profile">Profile</a></li>
 								  <li><a href="../userdashboard/logout">Logout</a></li>
 								</ul>
 							  </li>
@@ -128,6 +146,7 @@
 									<th>Task Name</th>
 									<th>Task Start Time </th>
 									<th>Task Stop Time</th>
+									<th>Total Time Spent</th>t
 									<th> Task Description </th>
 									<%
 										if(role.equals("Manager")){
@@ -143,7 +162,7 @@
 							</thead>
 							<tbody>
 								<!--insert data here-->
-								<% 
+								<%
 									LinkedList<UserManageTask.TaskData> tasks = (LinkedList<UserManageTask.TaskData>)session.getAttribute("Tasks");
 									User user1 =  (User)session.getAttribute("User");
 									String role1 = user1.getRole();
@@ -157,12 +176,44 @@
 										if(st.length() == 0) st = "None";
 										String sst = task.getTask().getStopTime();
 										if(sst.length() == 0) sst = "None";
+										String totaltime = "";
+										if(st.equals("None") || sst.equals("None")){
+											totaltime = "None";
+										}else{
+											
+											Timestamp ts = Timestamp.valueOf(st);
+											Timestamp ts1 = Timestamp.valueOf(sst);
+											//making sure startitme or stoptime is not null means not recorded
+											//making sure timestamp for start and stop time are not empty and starttime is not less than or equal to stoptime
+											if(ts != null && ts1 !=null && ts.compareTo(ts1) <= 0){
+												LocalDateTime start = ts.toLocalDateTime();
+												LocalDateTime stop = ts1.toLocalDateTime();
+												Duration s = Duration.between(start, stop);// duration between startime and stoptime
+												long days = (s.toDays() < 0 )? 0: s.toDays();
+												long hours = (s.toHours() < 0) ?0:s.toHours();
+												long mins = (s.toMinutes() < 0)? 0: s.toMinutes();
+												long secs = s.getSeconds() - (mins * 60);
+												mins = mins - (hours * 60);
+												hours = hours - (24 * days);
+												long[] results = {days, hours, mins, secs};
+												LocalTime time = (results == null) ? LocalTime.of(0, 0, 0): LocalTime.of((int)results[1], (int)results[2], (int)results[3]);
+												String time_duration = (results == null) ? String.format(" %d day(s),  %s:00", 0, time.toString()):String.format(" %d day(s), %s", results[0], time.toString());	
+												totaltime  = time_duration;
+											}else{
+												totaltime = "None";
+											}
+										
+											
+											
+											
+										}
 										String desc = task.getTask().getDesc();
 										out.println("<td>" + id + "</td>");
 										out.println("<td>" + p + "</td>");
 										out.println("<td>" + name + "</td>");
 										out.println("<td>" + st + "</td>");
 										out.println("<td>" + sst+ "</td>");
+										out.println("<td>" +totaltime+ "</td>");
 										out.println("<td>" + desc + "</td>");
 										if(role1.equals("Manager")){
 											out.println("<td><form action = \"../userdashboard/approveTask\"> <input name = \"id\"value = \""+id +"\" style = \"display:none;\"><button type=\"submit\">Approve</button></form></td>");
