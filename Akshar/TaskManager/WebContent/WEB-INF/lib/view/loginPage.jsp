@@ -7,7 +7,7 @@
 
   <div class="btn-group btn-group-justified">
     <a href="../navigateHome" class="btn btn-primary">Home</a>
-    <a href="profile.html" class="btn btn-primary">Profile</a>
+    
     <a href="../Login/showLogin" class="btn btn-primary">Login</a>
   </div>
   
