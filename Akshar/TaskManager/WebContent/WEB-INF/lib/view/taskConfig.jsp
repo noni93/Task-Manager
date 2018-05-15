@@ -1,5 +1,7 @@
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page import="java.util.*" %>
+<%@ page import="TaskManager.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -46,7 +48,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 								<ul class="dropdown-menu animated fadeInUp">
 								  <li><a href="profile.html">Profile</a></li>
-								  <li><a href="loginPage.html">Logout</a></li>
+								  <li><a href="../userdashboard/logout">Logout</a></li>
 								</ul>
 							  </li>
 							</ul>
@@ -65,7 +67,13 @@
 						<!-- Main menu -->
 						<li ><a href ="../userdashboard/showUDash"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
 						<li><a href="../Task/showStartTask"><i class="glyphicon glyphicon-calendar"></i>Propose Task</a></li>
-						<li class="current"><a href="../userdashboard/updateTask"><i class="glyphicon glyphicon-cog"></i> Task Config/Edit</a></li>
+						<% 
+							User user = (User)session.getAttribute("User");
+							String role = user.getRole();
+							if(role.equals("Manager")){
+								out.println("<li><a href=\"../TeamuserAdd/showTUAdd\"><i class=\"glyphicon glyphicon-calendar\"></i>Add TeamUser</a></li>");
+							}
+						%>
 						<li><a href="../userdashboard/showUDash"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
 						</li>
 					</ul>
@@ -77,43 +85,31 @@
 						<Strong><dif class="panel-title">Edit Tasks as Preferred</dif></Strong>
 						<br>
 					</div>
-				<form action="#" method="POST" veritcal-align="center" name = "login_fourm" style="border:1px solid" >
+				<form action="../Task/updateTask" method="POST" veritcal-align="center" name = "login_fourm" style="border:1px solid" >
 					<br><br>
+					<% 
+					Task task = (Task)session.getAttribute("TaskToBeEdited");
+					String name = task.getTask_name();
+					String p = task.getPriorty() + "";
+					String desc = task.getDesc();
+			
+					String id = request.getParameter("id");
+					out.println("<div><label for=\"task_name\" class=\"col-md-2 control-label\">Task Name:</label><input type=\"text\" value = \""+name+"\" name=\"task_name\" placeholder=\"\" id=\"task_name\" ><br></div><br><br>");
+					out.println("<br>");
+				//	out.println("<div><label for=\"dtp_input2\" class=\"col-md-2 control-label\">Start Time: </label><div class=\"input-group date form_datetime col-md-5\" data-date=\"2018-04-24T00:00:00Z\" data-date-format=\"dd MM yyyy - HH:ii p\" data-link-field=\"dtp_input2\"><input name=\"starttime\" class=\"form-control\" size=\"16\" type=\"text\" value=\""+st+"\" required onkeypress=\"return false;\"><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-remove\"></span></span><span class=\"input-group-addon\"><span class=\"glyphicon glyphicon-th\"></span></span></div><input type=\"hidden\" id=\"dtp_input1\" value=\"\" /><br/></div>");
 					
-					<div><label for="task_name" class="col-md-2 control-label">Task Name:</label>
-						<input type="text" name="task_name" placeholder="" id="task_name" ><br>
-					</div>
-					<br><br>
-					<div><label for="task_name" class="col-md-2 control-label">Task Rename:</label>
-						<input type="text" name="task_rename" placeholder="" id="task_rename" ><br>
-					</div>
-					<br>
+					out.println("<div><label for=\"task_describe\" class=\"col-md-2\" >Task Description:</label><textarea name=\"task_describe\" id=\"task_describe\" rows=\"5\" cols=\"50\">value = \""+desc+"\"</textarea><br>");
 					
-					<br>
-					<div >
-						<label for="dtp_input2" class="col-md-2 control-label">Stop Time: </label>
-						<div class="input-group date form_datetime col-md-5" data-date="2018-04-24T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input2">
-							<input name="stopTime" class="form-control" size="16" type="text" value="" required onkeypress="return false;">
-							<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-							<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-						</div>
-						<input type="hidden" id="dtp_input2" value="" /><br/>
-					</div>
-					<br>
-					<div><label for="task_describe" class="col-md-2" >Task Description:</label>
-						<textarea name="essay" name="task_describe" id="task_describe" rows="5" cols="50"></textarea><br>
-						<!--<input type="text" name="task_describe" placeholder="" id="task_describe" ><br>-->
-					</div>
-					<br><br>
+					out.println("<br><br>");
 					
-					<div><label for="task_priority" class="col-md-2 control-label" >Task Priority: </label>
-						<input type="text" name="task_priority" placeholder="Integer between 1-50" id="task_priority" ><br>
-					</div>
-					<br><br>
+					out.println("<div><label for=\"task_priority\" class=\"col-md-2 control-label\" >Task Priority: </label><input type=\"text\" value = \""+p+"\"name=\"task_priority\" placeholder=\"Integer between 1-50\" id=\"task_priority\" ><br></div>");
+					out.println("<br><br>");
+					out.println("<input name = \"id\" value = \""+id+"\" style = \"display:none;\">");
 					
+					%>
 					<br>
 					<div style="text-align:center"><input type="submit" value="Submit" name="submitButton" style="font-weight:bold" > 
-						<a href="userDash.html"><input type="button" value="Cancel" style="font-weight:bold"><br> 
+						<a href="../userdashboard/showUDash"><input type="button" value="Cancel" style="font-weight:bold"></a><br> 
 					</div>
 			</form>
 			</div>
