@@ -5,7 +5,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Team Dashboard 4 Task Management Inc.</title>
+		<%
+					  	User user3 = (User)session.getAttribute("User");
+					  	if(user3.getRole().equals("Manager")){
+					  		out.println(" <title>Manager Dashboard 4 Task Management Inc.</title>");
+					  	}else {
+					  		out.println(" <title>Team User Dashboard 4 Task Management Inc.</title>");
+					  	}
+		 %>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
 					<spring:url value = "/resources/bootstrap/css/bootstrap.min.css" var = "main" />
@@ -37,7 +44,14 @@
 				   <div class="col-md-5">
 					  <!-- Logo -->
 					  <div class="logo">
-						 <h1><a href="../userdashboard/showUDash">Team Dashboard</a></h1>
+						  <%
+					  	User user2 = (User)session.getAttribute("User");
+					  	if(user2.getRole().equals("Manager")){
+					  		out.println(" <h1><a href=\"../userdashboard/showUDash\">Manager Dashboard</a></h1>");
+					  	}else {
+					  		out.println(" <h1><a href=\"../userdashboard/showUDash\">Team User Dashboard</a></h1>");
+					  	}
+					  %>
 					  </div>
 				   </div>
 				   <div class="col-md-2">
@@ -47,7 +61,7 @@
 							  <li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 								<ul class="dropdown-menu animated fadeInUp">
-								  <li><a href="profile.html">Profile</a></li>
+								  <li><a href="../userdashboard/profile">Profile</a></li>
 								  <li><a href="../userdashboard/logout">Logout</a></li>
 								</ul>
 							  </li>
