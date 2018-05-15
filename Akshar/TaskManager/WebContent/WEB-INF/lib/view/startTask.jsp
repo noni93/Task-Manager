@@ -1,4 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page import="java.util.*" %>
+<%@ page import="TaskManager.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -30,7 +32,6 @@
 	</head>
 	 
 	<body>
-		<h1> Akshar</h1>
 		<div class="header">
 			 <div class="container">
 				<div class="row">
@@ -48,7 +49,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
 								<ul class="dropdown-menu animated fadeInUp">
 								  <li><a href="profile.html">Profile</a></li>
-								  <li><a href="loginPage.html">Logout</a></li>
+								  <li><a href="../userdashboard/logout">Logout</a></li>
 								</ul>
 							  </li>
 							</ul>
@@ -67,7 +68,13 @@
 						<!-- Main menu -->
 						<li ><a href ="../userdashboard/showUDash"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
 						<li class="current"><a href="../Task/showStartTask"><i class="glyphicon glyphicon-calendar"></i> Propose Task</a></li>
-						<li><a href="../Task/showUpdateTask"><i class="glyphicon glyphicon-cog"></i>Task Config/Edit</a></li>
+						<% 
+							User user = (User)session.getAttribute("User");
+							String role = user.getRole();
+							if(role.equals("Manager")){
+								out.println("<li><a href=\"../TeamuserAdd/showTUAdd\"><i class=\"glyphicon glyphicon-calendar\"></i>Add TeamUser</a></li>");
+							}
+						%>
 						<li><a href="../userdashboard/showUDash"><i class="glyphicon glyphicon-list"></i>Completed Tasks</a></li>
 						</li>
 					</ul>
@@ -82,26 +89,9 @@
 							<input type="text" name="task_name" placeholder="" id="task_name" required><br>
 						</div>
 						<br><br>
-						<div >
-						<fieldset>
-							<label for="dtp_input1" class="col-md-2 control-label">Start Time: *</label>
-							<div class="input-group date form_datetime col-md-5" data-date="2018-04-24T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-								<input class="form-control" size="16" type="text" name = "starttime"value="" required onkeypress="return false;">
-								<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-							</div>
-							<input type="hidden" id="dtp_input1" value="" /><br/>
-						</div>
+					
 						<br>
-						<div >
-							<label for="dtp_input2" class="col-md-2 control-label">Stop Time: *</label>
-							<div class="input-group date form_datetime col-md-5" data-date="2018-04-24T00:00:00Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input2" >
-								<input class="form-control" size="16" type="text" name = "stoptime" value="" required onkeypress="return false;">
-								<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-							</div>
-							<input type="hidden" id="dtp_input2" value="" /><br/>
-						</div>
+					
 						<br>
 						<div><label for="task_describe" class="col-md-2" >Task Description: *</label>
 							<textarea  name="task_describe" id="task_describe" rows="5" cols="50" required></textarea><br>
@@ -113,14 +103,9 @@
 							<input type="text" name="task_priority" placeholder="Integer between 1-50" id="task_priority" required><br>
 						</div>
 						<br><br>
-						<div><label for="task_team" class="col-md-2 control-label">Task Team: *</label>
-							<input type="text" name="task_team" placeholder="" id="task_team" required><br>
-						</div>
-						<br><br>
-						
 						<br>
 						<div style="text-align:center"><input type="submit" value="Submit" name="submitButton" style="font-weight:bold" >
-						<a href="userDash.html"><input type="button" value="Cancel" style="font-weight:bold"><br>
+						<a href="../userdashboard/showUDash"><input type="button" value="Cancel" style="font-weight:bold"></a><br> 
 					</div>
 						
 					</fieldset>
