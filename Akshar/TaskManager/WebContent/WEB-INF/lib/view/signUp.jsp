@@ -6,7 +6,7 @@
   <h2>4 Task Management Inc.</h2>
   <div class="btn-group btn-group-justified">
     <a href="../navigateHome" class="btn btn-primary">Home</a>
-    <a href="profile.html" class="btn btn-primary">Profile</a>
+    
     <a href="../Login/showLogin" class="btn btn-primary">Login</a>
   </div>
  <!--End of header--> 
@@ -34,7 +34,7 @@
 
 <div class="container">
 
- <div class="form-group">
+ <div class="form-group">"WebContent/WEB-INF/lib/view/signUp.jsp"
     <label for="company">Company:</label>
     <input type="text" name = "company" class="form-control" id="company" value = "Schoolcity" required>
   </div>
