@@ -30,9 +30,9 @@ public class ManagerAddController {
 			User user = (User)session.getAttribute("User");
 			String company = user.getCompany();
 			String[] data = {firstname + " " +lastname, workphone, email, location, username, password, title, department, repassword,company};
-			System.out.println(Arrays.toString(data));
+			
 			Registration register = new UserRegistration("manager", data); 
-			// below method takes in a table name returned from cregister.register() and puts user in it
+		
 			//see UserRegistration class and register() method in it
 			String result = register.register();
 			int length = result.length();
