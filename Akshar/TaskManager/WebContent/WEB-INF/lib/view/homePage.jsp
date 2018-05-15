@@ -1,15 +1,15 @@
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <html lang="en">
 <head>
 <div class="container">
   <h2>4 Task Management Inc.</h2>
   <div class="btn-group btn-group-justified">
     <a href= "navigateHome" class="btn btn-primary">Home</a>
-    <a href="profile.html" class="btn btn-primary">Profile</a>
     <a href="Login/showLogin" class="btn btn-primary">Login</a>
   </div>
   <title>HomePage</title>
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,7 +21,9 @@
 
 
 </div>
-<div class="jumbotron text-center" style="background-image: url(Meistertask.png); height: 203px; width: 644px; border: 1px solid black;" align="middle">
+  <spring:url value = "/resources/Meistertask.png" var = "pic" />
+<div class="jumbotron text-center" style="background-image:url('${pic}'); height: 203px; width: 644px; border: 1px solid black;" align="middle">
+
   <!--h1>Welcome!</h1>
   <!--p>This is our group project for CSC131 Spring 2018</p>
   <!--img src="task_management.png" alt="Task Manager"> //-->  
