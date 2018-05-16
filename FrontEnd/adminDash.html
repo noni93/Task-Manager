@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Admin Dashboard 4 Task Management Inc.</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- Bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<!-- styles -->
-		<link href="css/styles.css" rel="stylesheet">
-		<!--link href="./bootstrap1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"-->
-    <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-		<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-		<script type="text/javascript" src="./bootstrap1.1/js/bootstrap.min.js"></script>
+			<title>Manager Dashboard 4 Task Management Inc.</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!-- Bootstrap -->
+			<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<!-- styles -->
+			<link href="css/styles.css" rel="stylesheet">
+			<!--link href="./bootstrap1.1/css/bootstrap.min.css" rel="stylesheet" media="screen"-->
+			<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+			<script type="text/javascript" src="./bootstrap1.1/js/bootstrap.min.js"></script>
+			<link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+		
+		<link href="Bootstrap-Admin-Theme-prototype/vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
+	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- jQuery UI -->
+		<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!--script src="bootstrap/js/bootstrap.min.js"></script-->
+	
+		<script src="Bootstrap-Admin-Theme-prototype/vendors/datatables/js/jquery.dataTables.min.js"></script>
+	
+		<script src="Bootstrap-Admin-Theme-prototype/vendors/datatables/dataTables.bootstrap.js"></script>
+	
+		<script src="js/custom.js"></script>
+		<script src="js/tables.js"></script>
+		<script src="js/DashJs/strtStpBttn.js"></script>
 	</head>
 	
 	<body>
@@ -20,7 +37,7 @@
 				   <div class="col-md-5">
 					  <!-- Logo -->
 					  <div class="logo">
-						 <h1><a href="managerDash.html">Admin Dashboard</a></h1>
+						 <h1><a href="adminDash.html">Admin Dashboard</a></h1>
 					  </div>
 				   </div>
 				   <div class="col-md-2">
@@ -47,30 +64,67 @@
 				<div class="sidebar content-box" style="display: block;">
 					<ul class="nav">
 						<!-- Main menu -->
-						<li class="current"><a href ="managerDash.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+						<li class="current"><a href ="adminDash.html"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
 						<li><a href="loginPage.html"><i class="glyphicon glyphicon-eject"></i> Exit</a></li>
 						</li>
 					</ul>
 				 </div>
 				</div>
 				<div class="container">
-					<div class="col-md-6">
-						<div class="content-box-large">
-							<div class="panel-heading">
-								<dif class="panel-title">List of Managers</dif>
+						<div class="col-md-10">
+								<div class="content-box-large">
+									<div class="panel-heading">
+										<dif class="panel-title">Team</dif>
+									</div>
+									<div class="panel-body">
+										<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+											<thead>
+												<tr>
+												<tr>
+													<th>Name</th>
+													<th>User ID</th>
+													<th>User Type</th>
+													<th>????</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="odd gradeX">
+													<td>Trident</td>
+													<td>Internet
+														 Explorer 4.0</td>
+													<td>Win 95+</td>
+													<td class="center"> 4</td>
+												</tr>
+												<tr class="even gradeC">
+													<td>Trident</td>
+													<td>Internet
+														 Explorer 5.0</td>
+													<td>Win 95+</td>
+													<td class="center">5</td>
+												</tr>
+												<tr class="odd gradeA">
+													<td>Trident</td>
+													<td>Internet
+														 Explorer 5.5</td>
+													<td>Win 95+</td>
+													<td class="center">5.5</td>
+												</tr>
+												<tr class="even gradeA">
+													<td>Trident</td>
+													<td>Internet
+														 Explorer 6</td>
+													<td>Win 98+</td>
+													<td class="center">6</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="panel-body">
+									</div>
+								</div>
 							</div>
-							<div class="panel-body">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="content-box-large">
-							<div class="panel-heading">
-								<dif class="panel-title">List of Users</dif>
-							</div>
-							<div class="panel-body"></div>
-						</div>
-					</div>
+  			</div>
+			</div>
 				</div>
 			</div>
 		</div>			
