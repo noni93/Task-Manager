@@ -130,19 +130,15 @@ public class AdminManageUser {
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
-		// session = sessionFactory.getCurrentSession();
-		boolean is_deleted = true;
-		Transaction tx=session.beginTransaction();
-		User user=(User)session.get(User.class,id);
+		
+		User user = new User();
+		user = (User) session.get(User.class, id);
+		
 		session.delete(user);
-		tx.commit();
-
-		// String hql = "DELETE FROM Employee " +
-		// "WHERE id = :employee_id";
-		// Query query = session.createQuery(hql);
-		// query.setParameter("employee_id", 10);
-		// int result = query.executeUpdate();
-		// System.out.println("Rows affected: " + result);
-		return is_deleted;
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return true;
 	}
 }

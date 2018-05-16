@@ -107,11 +107,19 @@ public class UserManageTask {
 		return tid;
 	}
 	public boolean  deleteTask(String id) {
-		//Write query to delete the task;
-		//sample: Delete * from TaskTable where (id column)id = id
-		boolean isRemoved = false;
-		//isRemoved = true if has been deleted from database
-		return isRemoved;
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		session.beginTransaction();
+		
+		Task task = new Task();
+		task = (Task) session.get(Task.class, id);
+		
+		session.delete(task);
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		return true;
 		
 	}
 	public Task editTask(String id) {
